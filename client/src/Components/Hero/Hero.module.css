@@ -1,0 +1,49 @@
+.heroContainer {
+  @apply lg:h-[89vh] h-[70vh] md:h-[80vh] lg:mt-0 mt-6;
+  background-image: url("../../assets/Images/mainbg.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.heroBody {
+  @apply flex items-end lg:items-center justify-center lg:justify-start h-full;
+}
+
+.inputBody {
+  @apply bg-[#38414F] lg:ml-[10vh] rounded-full flex justify-between lg:mb-48;
+}
+
+.input {
+  @apply bg-transparent focus:outline-0 focus:text-white-text pl-4 placeholder:text-white-text/50 lg:placeholder:text-xl w-[30vh] lg:w-[50vh];
+}
+
+.joinbutton {
+  @apply bg-orange-bg rounded-full lg:px-11 px-5 py-2 text-white-text lg:text-xl;
+}
+
+.imageContainer {
+  @apply relative border h-[100vh] w-[70vh];
+}
+
+.image1,
+.image2 {
+  @apply absolute left-0 top-0;
+}
+
+.image2 {
+  z-index: 1;
+}
+
+.image1 {
+  @apply w-[10vh] flex justify-center;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .heroContainer {
+    background-image: url("../../assets/Images/mainbg_mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

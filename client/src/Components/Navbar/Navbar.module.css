@@ -1,0 +1,11 @@
+.navbarBody {
+  @apply mx-12 lg:mx-20 pt-12 flex justify-between;
+}
+
+.imageContainer {
+  @apply w-[30vw] lg:w-[10vw];
+}
+
+.joinButton {
+  @apply lg:text-2xl bg-gradient-to-r from-gradient-start to-gradient-end flex px-7 p-2 lg:px-9 rounded-full font-medium text-white-text;
+}
