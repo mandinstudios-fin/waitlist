@@ -12,7 +12,7 @@ const Nabvar = () => {
     <nav id='navbar' className={styles.navbarContainer}>
         <div className={styles.navbarBody}>
             <div className={`${styles.imageContainer} navItem`}><img src={olivialogo}/></div>
-            <div><button className={`${styles.joinButton} navItem`}>Join Us</button></div>
+            <div><button onClick={() => window.open(`https://mandinstudios.com`)} className={`${styles.joinButton} navItem`}>Join Us</button></div>
         </div>
     </nav>
   )
