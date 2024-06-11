@@ -3,22 +3,23 @@
   background-image: url("../../assets/Images/mainbg.svg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .heroBody {
-  @apply flex items-end lg:items-center justify-center lg:justify-start h-full;
+  @apply flex items-end justify-center h-full lg:items-center lg:justify-start;
 }
 
 .inputBody {
-  @apply bg-[#38414F] lg:ml-[10vh] rounded-full flex justify-between lg:mb-48;
+  @apply bg-[#38414F] lg:ml-[20vh] rounded-full flex justify-between lg:mb-48 mb-36;
 }
 
 .input {
-  @apply bg-transparent focus:outline-0 focus:text-white-text pl-4 placeholder:text-white-text/50 lg:placeholder:text-xl w-[30vh] lg:w-[50vh];
+  @apply bg-transparent rounded-full focus:bg-transparent active:bg-transparent focus:outline-0 focus:text-white-text pl-4 placeholder:text-white-text/50 lg:placeholder:text-xl w-[30vh] lg:w-[40vh];
 }
 
 .joinbutton {
-  @apply bg-orange-bg rounded-full lg:px-11 px-5 py-2 text-white-text lg:text-xl;
+  @apply px-5 py-2 rounded-full bg-orange-bg lg:px-11 text-white-text lg:text-xl;
 }
 
 .imageContainer {
@@ -27,7 +28,7 @@
 
 .image1,
 .image2 {
-  @apply absolute left-0 top-0;
+  @apply absolute top-0 left-0;
 }
 
 .image2 {

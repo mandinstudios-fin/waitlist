@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Loader.module.css'
-import olivideo from '../../assets/Images/olivideo.mp4'
 import oligif from '../../assets/Images/olivideo-unscreen.gif'
+import loader from '../../assets/Images/loader.gif'
 
 const Loader = () => {
   return (
