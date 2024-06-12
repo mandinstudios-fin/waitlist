@@ -1,5 +1,5 @@
 .heroContainer {
-  @apply lg:h-[89vh] h-[70vh] md:h-[80vh] lg:mt-0 mt-6;
+  @apply lg:h-[89vh] h-[81vh] md:h-[80vh] lg:mt-0 mt-6;
   background-image: url("../../assets/Images/mainbg.svg");
   background-size: cover;
   background-position: center;

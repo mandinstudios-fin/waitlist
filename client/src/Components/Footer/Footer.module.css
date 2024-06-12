@@ -1,0 +1,11 @@
+.footerContainer {
+  @apply text-center bg-orange-bg;
+}
+
+.footerBody {
+  @apply p-5 mx-8 lg:mx-20;
+}
+
+.footerText {
+  @apply font-serif text-xl font-medium cursor-pointer;
+}
