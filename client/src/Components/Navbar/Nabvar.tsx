@@ -60,9 +60,9 @@ const Nabvar = () => {
       color: "#C2956B",
       html: `
         <form id="swalForm">
-          <input type="text" id="swalName" name="Name" required placeholder="Name" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px;" autocomplete="off"><br><br>
-          <input type="email" id="swalEmail" name="Email" required placeholder="E-mail" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px;" autocomplete="off"><br><br>
-          <textarea id="swalReason" name="Reason" required placeholder="Why Join us ?" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px;" autocomplete="off"></textarea><br>
+          <input type="text" id="swalName" name="Name" required placeholder="Name" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #C2956B; border-radius: 12px" autocomplete="off"><br><br>
+          <input type="email" id="swalEmail" name="Email" required placeholder="E-mail" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #C2956B; border-radius: 12px" autocomplete="off"><br><br>
+          <textarea id="swalReason" name="Reason" required placeholder="Why Join us ?" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #C2956B; border-radius: 12px" autocomplete="off"></textarea><br>
         </form>
       `,
       confirmButtonText: 'Submit',

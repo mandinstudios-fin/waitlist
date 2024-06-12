@@ -3,7 +3,7 @@
 }
 
 .footerBody {
-  @apply p-5 mx-8 lg:mx-20;
+  @apply p-3 mx-8 lg:mx-20;
 }
 
 .footerText {
