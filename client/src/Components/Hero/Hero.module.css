@@ -10,7 +10,7 @@
   @apply flex items-end justify-center h-full lg:items-center lg:justify-start;
 }
 
-.inputBody {
+/* .inputBody {
   @apply bg-[#38414F] lg:ml-[20vh] rounded-full flex justify-between lg:mb-48 mb-36;
 }
 
@@ -20,6 +20,21 @@
 
 .joinbutton {
   @apply px-5 py-2 rounded-full bg-orange-bg lg:px-11 text-white-text lg:text-xl;
+} */
+
+.formContainer {
+  @apply text-orange-text text-center w-[60vh] backdrop-blur-sm lg:ml-20 border-l;
+}
+
+.form {
+  @apply p-20;
+}
+
+.formHeading {
+  @apply text-2xl;
+}
+
+.formDesc {
 }
 
 .imageContainer {

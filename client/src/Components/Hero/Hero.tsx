@@ -97,10 +97,19 @@ const Hero = () => {
   return (
     <section id='hero' className={styles.heroContainer}>
         <div className={styles.heroBody}>
-            <div>
+            {/* <div>
                 <form onSubmit={handleSubmit} className={`${styles.inputBody} input`}>
                     <input name='Email' className={styles.input} placeholder={`name@gmail.com`} autoComplete='off'/>
                     <button type='submit' className={styles.joinbutton}>Join Waitlist</button>
+                </form>
+            </div> */}
+
+            <div className={styles.formContainer}>
+                <form className={styles.form}>
+                    <div className={styles.formBody}>
+                        <h1 className={styles.formHeading}>Join our Waitlist</h1>
+                        <p className={styles.formDesc}>Sign up for our news letter to receive the lates updates and insights straight to your inbox.</p>
+                    </div>
                 </form>
             </div>
         </div>
