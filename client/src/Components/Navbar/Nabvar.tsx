@@ -4,93 +4,86 @@ import olivialogo from '../../assets/Images/olivialogo.png'
 import gsap from 'gsap'
 import Swal from 'sweetalert2'
 
-type FormData = {
-  name: string;
-  email: string;
-  reason: string;
-}
-
 const Nabvar = () => {
   useEffect(() => {
     gsap.fromTo(".navItem", {y: "-100%", opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.5})
   })
 
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    reason: ''
-  });
+  const postData = async (formData: FormData) => {
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzmh_ImnQthTlM4V_BSaJ0qp0pfA_Qy02tXcXgyRB-y_ClPHpLWB-6LHwlD6xD9Cji5sA/exec', {
+          method: 'POST',
+          body: formData
+      });
+  
+      if (response.status >= 200 && response.status < 300) {
+          const responseData = await response.text();
+          Swal.fire({
+              icon: 'success',
+              title: 'Success',
+              text: 'Form submitted successfully!',
+              background: "#101C2C",
+              color: "#C2956B",
+              showConfirmButton: false,
+              timer: 1500
+          });
+      } else {
+          console.error('Error:', response.statusText);
+          Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: 'Failed to submit form. Please try again later.',
+              background: "#101C2C",
+              color: "#C2956B",
+              showConfirmButton: false,
+              timer: 1500
+          });
+      }
+  } catch (error) {
+      console.error('Error:', error.message);
+      Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'An error occurred. Please try again later.',
+          background: "#101C2C",
+          color: "#C2956B",
+          showConfirmButton: false,
+          timer: 1500
+      });
+    }
+  }   
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-        ...prevState,
-        [name]: value
-    }));
-  };
-
-  // const handleSubmit = async () => {
-  //   const { value: formValues } = await Swal.fire<FormData>({
-  //     title: 'Join Us',
-  //     background: "#101C2C",
-  //     color: "#C2956B",
-  //     html: `
-  //       <form id="joinForm">
-  //         <input class="${styles.input}" type="text" id="name" name="Name" placeholder="Name" value="${formData.name}" required style="background: transparent; padding: 15px; outline: 0;"> <br />
-  //         <input class="${styles.input}" type="email" id="email" name="Email" placeholder="Email" value="${formData.email}" required style="background: transparent; padding: 15px; outline: 0;"> <br />
-  //         <textarea class="${styles.input}" rows=5 columns=40 id="reason" name="Reason" placeholder="Why do you want to join us?" required style="background: transparent; padding: 15px; outline: 0;">${formData.reason}</textarea>
-  //       </form>
-  //   `,
-  //     focusConfirm: false,
-  //     confirmButtonText: 'Submit',
-  //     preConfirm: () => {
-  //       const name = document.getElementById('name') as HTMLInputElement;
-  //       const email = document.getElementById('email') as HTMLInputElement;
-  //       const reason = document.getElementById('reason') as HTMLTextAreaElement;
-  //       return { name: name.value, email: email.value, reason: reason.value };
-  //     }
-  //   });
-
-  //   if (!formData.name || !formData.email || !formData.reason) {
-  //     Swal.fire({
-  //         icon: 'error',
-  //         title: 'Error',
-  //         text: 'Please fill in all fields.',
-  //         background: "#101C2C",
-  //         color: "#C2956B",
-  //         showConfirmButton: false,
-  //         timer: 1500
-  //     }).then(() => handleSubmit());
-  //     return;
-  //   }
-
-  //   if (formValues) {
-  //     const response = await fetch('https://script.google.com/macros/s/AKfycbzmh_ImnQthTlM4V_BSaJ0qp0pfA_Qy02tXcXgyRB-y_ClPHpLWB-6LHwlD6xD9Cji5sA/exec', {
-  //       method: 'POST',
-  //       headers: {
-  //           'Content-Type': 'application/x-www-form-urlencoded' // Set the content type to application/x-www-form-urlencoded
-  //       },
-  //       body: new URLSearchParams(formValues).toString() // Convert formValues to URL-encoded format
-  //     });
-    
-  //     // Check if the request was successful
-  //     if (response.ok) {
-  //         // Handle successful response
-  //         const responseData = await response.json();
-  //         console.log('Response data:', responseData);
-  //     } else {
-  //         // Handle error response
-  //         console.error('Error:', response.statusText);
-  //     }
-    
-  //   }
-  // };
+  const openSwalForm = () => {
+    Swal.fire({
+      title: "Join us",
+      background: "#101C2C",
+      color: "#C2956B",
+      html: `
+        <form id="swalForm">
+          <input type="text" id="swalName" name="Name" required placeholder="Name" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px;" autocomplete="off"><br><br>
+          <input type="email" id="swalEmail" name="Email" required placeholder="E-mail" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px;" autocomplete="off"><br><br>
+          <textarea id="swalReason" name="Reason" required placeholder="Why Join us ?" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px;" autocomplete="off"></textarea><br>
+        </form>
+      `,
+      confirmButtonText: 'Submit',
+      confirmButtonColor: "#C2956B",
+      preConfirm: () => {
+        const swalFormData = new FormData(document.getElementById('swalForm'));
+        return swalFormData;
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const formData = result.value;
+        postData(formData);
+      }
+    });
+  }
 
   return (
     <nav id='navbar' className={styles.navbarContainer}>
         <div className={styles.navbarBody}>
             <div className={`${styles.imageContainer} navItem`}><img src={olivialogo}/></div>
-            <div><button className={`${styles.joinButton} navItem`}>Join Us</button></div>
+            <div><button onClick={openSwalForm} className={`${styles.joinButton} navItem`}>Join Us</button></div>
         </div>
     </nav>
   )
