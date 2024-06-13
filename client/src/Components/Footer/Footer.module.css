@@ -1,9 +1,9 @@
 .footerContainer {
-  @apply text-center bg-orange-bg;
+  @apply sticky text-center lg:fixed lg:left-0 lg:right-0 lg:bottom-0 bg-orange-bg;
 }
 
 .footerBody {
-  @apply p-3 mx-8 lg:mx-20;
+  @apply p-3 mx-8 lg:p-2 lg:mx-20;
 }
 
 .footerText {

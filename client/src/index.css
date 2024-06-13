@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-main-background font-serif;
+  @apply font-serif lg:overflow-clip bg-main-background;
 }

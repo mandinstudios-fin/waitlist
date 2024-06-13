@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Home from './Pages/Home';
 import Loader from './Components/Loader/Loader';
+import Layout from './Layout/Layout';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      {loading ? <Loader /> : <Home />}
+      {loading ? <Loader /> : <Layout />}
     </>
   );
 }

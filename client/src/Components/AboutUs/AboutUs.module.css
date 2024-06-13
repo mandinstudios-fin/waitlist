@@ -1,0 +1,39 @@
+.aboutContainer {
+  @apply h-[89vh];
+}
+
+.aboutBody {
+  @apply py-12 mx-7 lg:mx-40;
+}
+
+.itemsContainer {
+  @apply flex flex-col items-center justify-center gap-5 lg:flex-row;
+}
+
+.cardContainer {
+  @apply rounded-3xl bg-white/5 text-orange-text backdrop-blur-sm lg:h-[40vh] lg:w-[50vw];
+}
+
+.cardBody {
+  @apply py-10 p-7;
+}
+
+.cardHeading {
+  @apply text-xl text-center lg:text-2xl;
+}
+
+.cardDescription {
+  @apply mt-4 text-justify text-orange-text/70;
+}
+
+.details {
+  @apply mt-10 text-xl text-center lg:text-2xl lg:mt-20;
+}
+
+.details1 {
+  @apply text-orange-text;
+}
+
+.details2 {
+  @apply mt-10 text-white-text;
+}

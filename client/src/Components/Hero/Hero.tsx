@@ -3,11 +3,15 @@ import styles from './Hero.module.css'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
 import Swal from 'sweetalert2'
+import { icons } from '../../utils/index'
+import { GoArrowUpRight } from "react-icons/go";
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
+    
     useGSAP(() => {
         console.log("gsap")
-        gsap.fromTo(".input", {y: "100%", opacity: 0}, {y: 0, opacity: 1, duration: 1.3})
+        gsap.fromTo(".input", {y: "100%", opacity: 0}, {y: 0, opacity: 1, duration: 0.9, stagger: 0.3})
     })
 
     const handleInput = (e: Event) => {
@@ -103,15 +107,28 @@ const Hero = () => {
                     <button type='submit' className={styles.joinbutton}>Join Waitlist</button>
                 </form>
             </div> */}
+            <div className={styles.heroInnerBody}>
+                <div className={`${styles.formContainer} input`}>
+                    <h1 className={styles.formHeading}>Join our Waitlist</h1>
+                    <p className={styles.formDesc}>Sign up for our news letter to receive the latest updates and insights straight to your inbox.</p>
+                    <form className={styles.form} onSubmit={handleSubmit} n>
+                        <input name='Email' className={styles.input} placeholder={`name@gmail.com`} autoComplete='off'/>
+                        <button type='submit' className={styles.joinbutton}>Join Waitlist</button>
+                    </form>
+                </div>
 
-            <div className={styles.formContainer}>
-                <form className={styles.form}>
-                    <div className={styles.formBody}>
-                        <h1 className={styles.formHeading}>Join our Waitlist</h1>
-                        <p className={styles.formDesc}>Sign up for our news letter to receive the lates updates and insights straight to your inbox.</p>
+                <div className={styles.iconsContainer}>
+                    <div className={styles.iconsBody}>
+                        {icons.map((icon) => <div onClick={() => window.open(icon.link)} className={`${styles.iconBody} input`}><icon.icon color={`#C2956B`} className={styles.icon}/></div>)}
                     </div>
-                </form>
+                    
+                </div>
+
+                <div className={`${styles.redirect} input`}>
+                    <Link to={`/about`} className={styles.iconBody}>Learn More <GoArrowUpRight color={`#C2956B`} className={styles.icon}/></Link>
+                </div>
             </div>
+            
         </div>
     </section>
   )

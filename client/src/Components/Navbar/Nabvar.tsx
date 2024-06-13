@@ -3,8 +3,12 @@ import styles from './Navbar.module.css'
 import olivialogo from '../../assets/Images/olivialogo.png'
 import gsap from 'gsap'
 import Swal from 'sweetalert2'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Nabvar = () => {
+  const location = useLocation().pathname;
+  const navigate = useNavigate();
+
   useEffect(() => {
     gsap.fromTo(".navItem", {y: "-100%", opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.5})
   })
@@ -51,7 +55,11 @@ const Nabvar = () => {
           timer: 1500
       });
     }
-  }   
+  }  
+  
+  const navigateTo = () => {
+    navigate(`/about`)
+  }
 
   const openSwalForm = () => {
     Swal.fire({
@@ -83,7 +91,7 @@ const Nabvar = () => {
     <nav id='navbar' className={styles.navbarContainer}>
         <div className={styles.navbarBody}>
             <div className={`${styles.imageContainer} navItem`}><img src={olivialogo}/></div>
-            <div><button onClick={openSwalForm} className={`${styles.joinButton} navItem`}>Join Us</button></div>
+            <div><button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>Join Us</button></div>
         </div>
     </nav>
   )
