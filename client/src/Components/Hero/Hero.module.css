@@ -29,7 +29,7 @@
 } */
 
 .formContainer {
-  @apply text-orange-text bg-white/5 rounded-3xl text-center lg:w-[60vh]  lg:backdrop-blur-sm backdrop-blur-2xl lg:ml-20 p-10 py-14 lg:px-24 lg:mx-0 mx-64;
+  @apply text-orange-text bg-white/5 rounded-3xl text-center lg:w-[70vh]  lg:backdrop-blur-sm backdrop-blur-2xl lg:ml-20 p-10 py-14 lg:px-24 lg:mx-0 mx-64;
 }
 
 .form {

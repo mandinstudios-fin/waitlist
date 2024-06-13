@@ -13,6 +13,11 @@ const AboutUs = () => {
   return (
     <section className={styles.aboutContainer}>
         <div className={styles.aboutBody}>
+            <div className={styles.mainDetails}>
+                <div className={`${styles.mainDetails1} details`}><h1>Olin Token: Revolutionizing Crypto Trading on Olivia</h1></div>
+                <div className={`${styles.mainDetails2} details`}><p>Olivia India is thrilled to introduce Olin, our groundbreaking native cryptocurrency token that will redefine the way you trade and interact with our platform. Olin Token encapsulates our unwavering commitment to innovation, community empowerment, and democratized access to the crypto realm.</p></div>
+            </div>
+
             <div className={styles.itemsContainer}>
                 {
                     aboutItems.map((about, i) => <AboutUsItemCard key={i} {...about}/>)

@@ -24,10 +24,6 @@ type AboutusItems = {
 }
 export const aboutItems: AboutusItems[] = [
     {
-        title: "Olin Token: Revolutionizing Crypto Trading on Olivia",
-        description: "Olivia India is thrilled to introduce Olin, our groundbreaking native cryptocurrency token that will redefine the way you trade and interact with our platform. Olin Token encapsulates our unwavering commitment to innovation, community empowerment, and democratized access to the crypto realm.",
-    },
-    {
         title: "Seamless Integration with Base Chain and Coinbase Smart Wallet",
         description: "Initially, the Olin Token will be launched on the Base Chain. With the integrated Base Wallet in our application, users can effortlessly create their own self-custodial wallet using their fingertips. Additionally, with the latest Coinbase Smart Wallet enables users to create their wallets easily using passkeys.",
     },

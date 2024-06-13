@@ -3,15 +3,27 @@
 }
 
 .aboutBody {
-  @apply py-12 mx-7 lg:mx-40;
+  @apply py-12 mx-7 lg:mx-40 text-center;
+}
+
+.mainDetails {
+  @apply lg:mx-32
+}
+
+.mainDetails1 {
+  @apply lg:text-2xl text-xl text-orange-text;
+}
+
+.mainDetails2 {
+  @apply text-white-text/50 lg:my-4;
 }
 
 .itemsContainer {
-  @apply flex flex-col items-center justify-center gap-5 lg:flex-row;
+  @apply flex flex-col justify-center gap-5 lg:flex-row;
 }
 
 .cardContainer {
-  @apply rounded-3xl bg-white/5 text-orange-text backdrop-blur-sm lg:h-[40vh] lg:w-[50vw];
+  @apply rounded-3xl bg-white/5 text-orange-text backdrop-blur-sm flex-1;
 }
 
 .cardBody {
@@ -27,7 +39,7 @@
 }
 
 .details {
-  @apply mt-10 text-xl text-center lg:text-2xl lg:mt-20;
+  @apply mt-10 text-xl text-center lg:text-2xl lg:mt-20 pb-12;
 }
 
 .details1 {
