@@ -9,11 +9,11 @@
 }
 
 .heroBody {
-  @apply flex items-end justify-center w-[100%] h-full text-center lg:items-center lg:justify-start;
+  @apply flex items-end justify-center w-[100%] h-full text-center lg:items-center xl:items-center xl:justify-start;
 }
 
 .heroInnerBody {
-  @apply flex flex-col items-center justify-center lg:ml-6 2xl:ml-56;
+  @apply flex flex-col items-center justify-center lg:mx-60 xl:mx-0 xl:ml-36 lg:mt-96 xl:mt-0;
 }
 
 /* .inputBody {
@@ -29,23 +29,23 @@
 } */
 
 .formContainer {
-  @apply text-orange-text bg-white/5 rounded-3xl text-center lg:w-[70vh]  lg:backdrop-blur-sm backdrop-blur-2xl lg:ml-20 p-10 py-14 lg:px-24 lg:mx-0 mx-64;
+  @apply text-orange-text shadow-2xl bg-[#1E3451]/20 rounded-3xl text-center xl:w-[70vh]  xl:backdrop-blur-sm backdrop-blur-2xl xl:ml-20 p-10 lg:py-20 py-14 lg:px-24 lg:mx-0 mx-64;
 }
 
 .form {
-  @apply flex flex-col items-center p-0 mt-5 lg:flex-row lg:justify-between;
+  @apply flex flex-col items-center p-0 mt-5 lg:mt-8 lg:flex-row lg:justify-between;
 }
 
 .formHeading {
-  @apply mb-3 text-xl lg:text-2xl;
+  @apply mb-3 text-2xl font-bold lg:text-3xl;
 }
 
 .formDesc {
-  @apply text-sm lg:text-base text-orange-text/70;
+  @apply text-lg lg:text-base text-orange-text/70;
 }
 
 .input {
-  @apply active:border-orange-text focus:border-orange-text py-3 lg:w-[27vh] w-[35vh] text-center bg-transparent border border-orange-text rounded-full;
+  @apply active:border-orange-text focus:border-orange-text py-3 lg:w-[35vh] w-[35vh] text-center bg-transparent border border-orange-text rounded-full;
 }
 
 .joinbutton {
@@ -61,7 +61,7 @@
 }
 
 .iconBody {
-  @apply p-3 m-3 rounded-full cursor-pointer border-orange-text bg-white/5;
+  @apply p-3 m-3 rounded-full shadow-xl cursor-pointer border-orange-text bg-[#1E3451]/30 backdrop-blur-sm;
 }
 
 .icon {
@@ -69,7 +69,11 @@
 }
 
 .redirect {
-  @apply pb-12 mt-5 lg:ml-11 text-orange-text;
+  @apply pb-12 mt-5 lg:ml-11;
+}
+
+.redirectBody {
+  @apply p-3 m-3 font-medium rounded-full shadow-xl cursor-pointer bg-orange-bg;
 }
 
 .imageContainer {

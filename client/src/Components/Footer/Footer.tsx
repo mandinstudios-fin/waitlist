@@ -5,13 +5,13 @@ import gsap from 'gsap'
 
 const Footer = () => {
   useGSAP(() => {
-    gsap.fromTo(".footer", {y: "100%", opacity: 0}, {y: 0, opacity: 1})
+    gsap.fromTo(".footer", {y: "100%", opacity: 0}, {y: 0, opacity: 1, duration: 1})
   })
 
   return (
-    <section className={styles.footerContainer}>
+    <section className={`${styles.footerContainer} footer`}>
         <div className={styles.footerBody}>
-            <h1 className={`${styles.footerText} footer`} onClick={() => window.open(`https://mandinstudios.com/`)}>All Rights Reserved @mandinstudios.com</h1>
+            <h1 className={styles.footerText} onClick={() => window.open(`https://mandinstudios.com/`)}>All Rights Reserved @mandinstudios.com</h1>
         </div>
     </section>
   )

@@ -1,5 +1,5 @@
 .footerContainer {
-  @apply sticky text-center lg:fixed lg:left-0 lg:right-0 lg:bottom-0 bg-orange-bg;
+  @apply text-center lg:fixed lg:bottom-0 lg:right-0 lg:left-0 bg-orange-bg;
 }
 
 .footerBody {
@@ -7,5 +7,5 @@
 }
 
 .footerText {
-  @apply font-serif text-xl font-medium cursor-pointer;
+  @apply text-xl font-medium cursor-pointer text-blue-text;
 }

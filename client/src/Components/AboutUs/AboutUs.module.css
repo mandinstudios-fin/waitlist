@@ -1,51 +1,117 @@
+@font-face {
+  font-family: "Inria Serif";
+  src: url("../../assets/Fonts/InriaSerif-Regular.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "Lateef";
+  src: url("../../assets/Fonts/LateefRegOT.ttf") format("truetype");
+}
+
 .aboutContainer {
-  @apply h-[89vh];
+  @apply h-auto;
 }
 
 .aboutBody {
-  @apply py-12 mx-7 lg:mx-40 text-center;
+  @apply py-12 text-center xl:py-0 xl:pb-12 mx-7 xl:mx-16;
 }
 
 .mainDetails {
-  @apply lg:mx-32
+  @apply xl:mx-28;
 }
 
 .mainDetails1 {
-  @apply lg:text-2xl text-xl text-orange-text;
+  font-family: "Lateef", sans-serif;
+  font-weight: 300;
+  @apply text-9xl uppercase xl:text-[18vh] text-orange-text;
 }
 
 .mainDetails2 {
-  @apply text-white-text/50 lg:my-4;
+  font-family: "Lateef", sans-serif;
+  @apply -mt-6 text-2xl italic xl:-mt-10 text-white-text/70;
+}
+
+.mainDetails3 {
+  font-family: "Inria Serif";
+  font-weight: 50;
+  @apply my-8 text-lg text-justify xl:my-8 font-extralight xl:mb-12 lg:text-2xl xl:text-3xl text-orange-text;
+}
+
+.mainDetails3 p {
+  font-weight: lighter;
+}
+
+.mainDetails3 p span {
+  @apply font-extrabold text-orange-text;
 }
 
 .itemsContainer {
-  @apply flex flex-col justify-center gap-5 lg:flex-row;
+  @apply flex flex-col justify-center gap-5 mt-12 xl:mt-8 lg:flex-row xl:mx-48;
 }
 
 .cardContainer {
-  @apply rounded-3xl bg-white/5 text-orange-text backdrop-blur-sm flex-1;
+  @apply relative flex-1 shadow-2xl rounded-3xl bg-[#1E3451]/20 text-orange-text backdrop-blur-sm hover:drop-shadow-2xl;
 }
+
+.cardContainer:hover {
+  @apply transition duration-500;
+  box-shadow: 0px 0px 10px #c2956b;
+}
+
+/* .cardContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  animation: pulseBorder 2s infinite linear alternate;
+  @apply rounded-3xl;
+}
+
+@keyframes pulseBorder {
+  0% {
+    border-color: #c2956b;
+  }
+  100% {
+    border-color: transparent;
+  }
+} */
 
 .cardBody {
   @apply py-10 p-7;
 }
 
 .cardHeading {
-  @apply text-xl text-center lg:text-2xl;
+  @apply text-xl font-semibold text-center lg:text-2xl;
 }
 
 .cardDescription {
-  @apply mt-4 text-justify text-orange-text/70;
+  line-height: 5;
+  @apply mt-4 text-lg text-justify text-orange-text/70;
 }
 
 .details {
-  @apply mt-10 text-xl text-center lg:text-2xl lg:mt-20 pb-12;
+  @apply pb-12 mt-10 text-xl text-center lg:text-2xl lg:mt-20;
 }
 
 .details1 {
-  @apply text-orange-text;
+  @apply text-justify text-orange-text xl:mx-32;
 }
 
 .details2 {
-  @apply mt-10 text-white-text;
+  @apply mt-10 text-center text-white-text;
+}
+
+.details2 span:nth-child(1) {
+  @apply text-[#FF671F];
+}
+
+.details2 span:nth-child(2) {
+  @apply text-[#FFFFFF];
+}
+
+.details2 span:nth-child(3) {
+  @apply text-[#046A38];
 }

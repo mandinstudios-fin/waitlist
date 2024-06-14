@@ -24,11 +24,11 @@ type AboutusItems = {
 }
 export const aboutItems: AboutusItems[] = [
     {
-        title: "Seamless Integration with Base Chain and Coinbase Smart Wallet",
+        title: "Smart Wallet Integration",
         description: "Initially, the Olin Token will be launched on the Base Chain. With the integrated Base Wallet in our application, users can effortlessly create their own self-custodial wallet using their fingertips. Additionally, with the latest Coinbase Smart Wallet enables users to create their wallets easily using passkeys.",
     },
     {
-        title: "Introducing Physical Crypto Gift Cards",
+        title: "Physical Crypto Gift Cards",
         description: "In a pioneering move, we are introducing physical gift cards for crypto, allowing users to easily load and transfer tokens with unparalleled ease. These gift cards will be available for individuals and institutions alike, facilitating seamless crypto transfers through a familiar physical card model. Imagine the joy of presenting someone with a unique crypto gift, encapsulating the future of finance in a tangible form.",
     },
     {

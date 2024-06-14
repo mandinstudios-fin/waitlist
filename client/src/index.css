@@ -1,7 +1,17 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/Fonts/Poppins-Regular.ttf") format("woff2");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+*::selection {
+  @apply bg-orange-bg text-blue-text;
+}
+
 body {
-  @apply font-serif bg-main-background;
+  font-family: "Poppins", sans-serif;
+  @apply bg-main-background;
 }
