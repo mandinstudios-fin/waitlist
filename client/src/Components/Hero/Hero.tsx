@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import { icons } from '../../utils/index'
 import { GoArrowUpRight } from "react-icons/go";
 import { Link } from 'react-router-dom';
+import Socialmedia from '../Socialmedia/Socialmedia';
 
 const Hero = () => {
     
@@ -121,7 +122,7 @@ const Hero = () => {
                     <div className={styles.iconsBody}>
                         {icons.map((icon) => <div onClick={() => window.open(icon.link)} className={`${styles.iconBody} input`}><icon.icon color={`#C2956B`} className={styles.icon}/></div>)}
                     </div>
-                    
+                    {/* <Socialmedia /> */}
                 </div>
 
                 <div className={`${styles.redirect} input`}>

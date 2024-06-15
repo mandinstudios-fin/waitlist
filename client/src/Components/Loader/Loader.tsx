@@ -1,13 +1,15 @@
 import React from 'react'
 import styles from './Loader.module.css'
-import oligif from '../../assets/Images/olivideo-unscreen.gif'
-import loader from '../../assets/Images/loader.gif'
+import oligif from '../../assets/Images/mainbgintro.gif'
 
 const Loader = () => {
   return (
     <section className={styles.loaderContainer}>
-        {/* <video autoPlay loop muted src={olivideo}/> */}
+      {/* <video autoPlay loop muted src={olivideo}/> */}
+      <div className={styles.loaderBody}>
         <img src={oligif}/>
+      </div>
+      
     </section>
   )
 }
