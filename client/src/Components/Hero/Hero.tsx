@@ -126,7 +126,7 @@ const Hero = () => {
                 </div>
 
                 <div className={`${styles.redirect} input`}>
-                    <Link to={`/about`} className={styles.redirectBody}>Learn More <GoArrowUpRight color={`#101C2C`} className={styles.icon}/></Link>
+                    <Link to={`/about`} className={styles.redirectBody}>Know More <GoArrowUpRight color={`#101C2C`} className={styles.icon}/></Link>
                 </div>
             </div>
             

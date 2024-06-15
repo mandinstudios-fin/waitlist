@@ -91,7 +91,7 @@ const Nabvar = () => {
     <nav id='navbar' className={styles.navbarContainer}>
         <div className={styles.navbarBody}>
             <div className={`${styles.imageContainer} navItem`}><img src={olivialogo}/></div>
-            <div><button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>Join Us</button></div>
+            <div><button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>{location === "/" ? "Know More" : "Join us"}</button></div>
         </div>
     </nav>
   )

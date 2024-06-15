@@ -26,6 +26,10 @@
   @apply text-9xl uppercase xl:text-[18vh] text-orange-text;
 }
 
+.mainDetails1 h1 {
+  @apply cursor-pointer
+}
+
 .mainDetails2 {
   font-family: "Lateef", sans-serif;
   @apply -mt-6 text-2xl italic xl:-mt-10 text-white-text/70;
