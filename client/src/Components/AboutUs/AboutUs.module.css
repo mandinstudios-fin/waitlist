@@ -91,7 +91,7 @@
 
 .cardDescription {
   hyphens: auto;
-  text-align: justify;
+  text-align: auto;
   word-spacing: -2px;
   content-visibility: auto;
   @apply mt-4 text-lg text-orange-text/70;

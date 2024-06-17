@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react'
+import React, { FormEvent, useState } from 'react'
 import styles from './Hero.module.css'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import Socialmedia from '../Socialmedia/Socialmedia';
 
 const Hero = () => {
+    const [buttonText, setButtonText] = useState<string>("Join");
     
     useGSAP(() => {
         console.log("gsap")
@@ -56,6 +57,7 @@ const Hero = () => {
         }
 
         try {
+            setButtonText("Joining...");
             const response = await fetch('https://script.google.com/macros/s/AKfycbyX_zwCrqcDgrXX8PGDtzVaxuQW8TEdC1rm7BlL8oLv7mlh8Karr3snD4jUXBvAw1vX2g/exec', {
                 method: 'POST',
                 body: formData
@@ -70,17 +72,19 @@ const Hero = () => {
                     showConfirmButton: false,
                     timer: 2000
                 });
+                setButtonText("Join");
                 return;
+            } else {
+                Swal.fire({
+                    icon: "success",
+                    title: "Waitlist Joined...!",
+                    background: "#101C2C",
+                    color: "#C2956B",
+                    showConfirmButton: false,
+                    timer: 2000,
+                })
             }
-
-            Swal.fire({
-                icon: "success",
-                title: "Waitlist Joined...!",
-                background: "#101C2C",
-                color: "#C2956B",
-                showConfirmButton: false,
-                timer: 2000,
-            })
+            setButtonText("Join")
             
             const text = await response.text();
             console.log('Response:', text)
@@ -95,6 +99,7 @@ const Hero = () => {
                 showConfirmButton: false,
                 timer: 2000
             });
+            setButtonText("Join")
             console.error('There was a problem with the fetch operation:', error);
         } 
     }
@@ -114,7 +119,7 @@ const Hero = () => {
                     <p className={styles.formDesc}>Sign up for our news letter to receive the latest updates and insights straight to your inbox.</p>
                     <form className={styles.form} onSubmit={handleSubmit} n>
                         <input name='Email' className={styles.input} placeholder={`name@gmail.com`} autoComplete='off'/>
-                        <button type='submit' className={styles.joinbutton}>Join</button>
+                        <button type='submit' className={styles.joinbutton}>{buttonText}</button>
                     </form>
                 </div>
 

@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 const Nabvar = () => {
+  const [buttonText, setButtonText] = useState("Contribute")
   const location = useLocation().pathname;
   const navigate = useNavigate();
 
@@ -14,6 +15,7 @@ const Nabvar = () => {
   })
 
   const postData = async (formData: FormData) => {
+    setButtonText("Submitting...");
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbzmh_ImnQthTlM4V_BSaJ0qp0pfA_Qy02tXcXgyRB-y_ClPHpLWB-6LHwlD6xD9Cji5sA/exec', {
           method: 'POST',
@@ -21,39 +23,41 @@ const Nabvar = () => {
       });
   
       if (response.status >= 200 && response.status < 300) {
-          const responseData = await response.text();
-          Swal.fire({
-              icon: 'success',
-              title: 'Success',
-              text: 'Form submitted successfully!',
-              background: "#101C2C",
-              color: "#C2956B",
-              showConfirmButton: false,
-              timer: 1500
-          });
+        const responseData = await response.text();
+        Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Form submitted successfully!',
+          background: "#101C2C",
+          color: "#C2956B",
+          showConfirmButton: false,
+          timer: 2000
+        });
       } else {
-          console.error('Error:', response.statusText);
-          Swal.fire({
-              icon: 'error',
-              title: 'Error',
-              text: 'Failed to submit form. Please try again later.',
-              background: "#101C2C",
-              color: "#C2956B",
-              showConfirmButton: false,
-              timer: 1500
-          });
-      }
-  } catch (error) {
-      console.error('Error:', error.message);
-      Swal.fire({
+        console.error('Error:', response.statusText);
+        Swal.fire({
           icon: 'error',
           title: 'Error',
-          text: 'An error occurred. Please try again later.',
+          text: 'Failed to submit form. Please try again later.',
           background: "#101C2C",
           color: "#C2956B",
           showConfirmButton: false,
           timer: 1500
+        });
+      }
+      setButtonText("Contribute");
+    } catch (error) {
+      console.error('Error:', error.message);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'An error occurred. Please try again later.',
+        background: "#101C2C",
+        color: "#C2956B",
+        showConfirmButton: false,
+        timer: 2000
       });
+      setButtonText("Contribute");
     }
   }  
   
@@ -77,17 +81,24 @@ const Nabvar = () => {
       confirmButtonText: 'Submit',
       confirmButtonColor: "#C2956B",
       preConfirm: () => {
-        const swalFormData = new FormData(document.getElementById('swalForm'));
-        return swalFormData;
+        const nameInput = document.getElementById('swalName') as HTMLInputElement;
+        const emailInput = document.getElementById('swalEmail') as HTMLInputElement;
+        const reasonInput = document.getElementById('swalReason') as HTMLTextAreaElement;
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const reason = reasonInput.value.trim();
+
+        if (!name || !email || !reason) {
+          Swal.showValidationMessage(`Please fill out all fields.`);
+          return false;
+        } else {
+          const swalFormData = new FormData(document.getElementById('swalForm'));
+          return swalFormData;
+        }
       }
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log(result)
         const formData = result.value;
-        console.log(result.value)
-        if(!formData.value) {
-          openSwalForm();
-        }
         postData(formData);
       }
     });
@@ -97,7 +108,7 @@ const Nabvar = () => {
     <nav id='navbar' className={styles.navbarContainer}>
         <div className={styles.navbarBody}>
             <div className={`${styles.imageContainer} navItem`}><img src={olivialogo} onClick={() => navigate(`/`)}/></div>
-            <div><button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>{location === "/" ? "Know More" : "Contribute"}</button></div>
+            <div><button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>{location === "/" ? "Know More" : buttonText}</button></div>
         </div>
     </nav>
   )
