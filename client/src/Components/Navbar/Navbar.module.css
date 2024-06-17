@@ -3,7 +3,7 @@
 }
 
 .imageContainer {
-  @apply w-[30vw] lg:w-[10vw];
+  @apply w-[30vw] lg:w-[10vw] cursor-pointer;
 }
 
 .joinButton {

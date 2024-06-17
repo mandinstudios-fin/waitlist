@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Layout.module.css'
 import { Routes, Route } from 'react-router-dom'
 import Home from '../Pages/Home'
 import About from '../Pages/About'
@@ -8,13 +9,13 @@ import dottedbg from '../assets/Images/dotted.svg'
 
 const Layout = () => {
   return (
-    <div style={{backgroundImage: `url(${dottedbg})`, backgroundRepeat: "no-repeat", backgroundSize: "contain"}}>
+    <div className={styles.layout} style={{backgroundImage: `url(${dottedbg})`, backgroundRepeat: "no-repeat", backgroundSize: "contain"}}>
       <Nabvar />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />}/>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
     
   )

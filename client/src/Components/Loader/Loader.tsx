@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Loader.module.css'
-import oligif from '../../assets/Images/mainbgintro.gif'
+import oligif from '../../assets/Images/loader.gif'
 
 const Loader = () => {
   return (

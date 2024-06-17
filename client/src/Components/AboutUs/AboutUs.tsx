@@ -10,7 +10,7 @@ const AboutUs = () => {
     const navigate = useNavigate();
 
     useGSAP(() => {
-        gsap.fromTo(".details", { y: "100%", opacity: 0 }, {y: 0, opacity: 1, stagger: 0.5})
+        gsap.fromTo(".details", { y: "100%", opacity: 0 }, {y: 0, opacity: 1, stagger: 0.2, duration: 1})
     })
 
   return (
@@ -24,7 +24,7 @@ const AboutUs = () => {
 
             <div className={styles.itemsContainer}>
                 {
-                    aboutItems.map((about, i) => <AboutUsItemCard key={i} {...about}/>)
+                    aboutItems.map((about, i) => <AboutUsItemCard key={i} {...about} className={`details`}/>)
                 }
             </div>
 

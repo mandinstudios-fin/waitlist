@@ -6,6 +6,16 @@
   background-repeat: no-repeat;
   image-resolution: from-image 300dpi;
   image-rendering: pixelated;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .heroBody {
@@ -29,15 +39,15 @@
 } */
 
 .formContainer {
-  @apply text-orange-text shadow-2xl bg-[#1E3451]/20 rounded-3xl text-center xl:w-[70vh]  xl:backdrop-blur-sm backdrop-blur-2xl xl:ml-20 p-10 lg:py-20 py-14 lg:px-24 lg:mx-0 mx-64;
+  @apply text-orange-text shadow-2xl bg-[#1E3451]/20 rounded-3xl text-center xl:w-[70vh]  xl:backdrop-blur-sm backdrop-blur-2xl xl:ml-20 p-10 lg:py-20 py-14 lg:px-24 lg:mx-0 mx-72;
 }
 
 .form {
-  @apply flex flex-col items-center p-0 mt-5 lg:mt-8 lg:flex-row lg:justify-between;
+  @apply flex flex-col items-center p-0 mt-5 lg:gap-7 lg:mt-8 lg:flex-row lg:justify-between;
 }
 
 .formHeading {
-  @apply mb-3 text-2xl font-bold lg:text-3xl;
+  @apply text-3xl font-bold mb-7 lg:text-3xl xl:text-4xl;
 }
 
 .formDesc {
@@ -49,7 +59,7 @@
 }
 
 .joinbutton {
-  @apply p-3 px-5 mt-4 rounded-full lg:p-3 lg:px-3 lg:mt-0 bg-orange-text text-white-text text-nowrap;
+  @apply p-3 px-5 mt-4 rounded-full lg:p-4 lg:px-7 lg:mt-0 bg-orange-text text-white-text text-nowrap;
 }
 
 .iconsContainer {
@@ -96,9 +106,10 @@
 
 @media (max-width: 1024px) {
   .heroContainer {
-    background-image: url("../../assets/Images/mainbg_mobile.svg");
+    background-image: url("../../assets/Images/mainbg-mobile.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    animation: fadeIn 2s ease-in-out;
   }
 }

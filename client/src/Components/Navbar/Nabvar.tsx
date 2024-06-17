@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Navbar.module.css'
-import olivialogo from '../../assets/Images/olivialogo.png'
+import olivialogo from '../../assets/Images/olivialogo.svg'
 import gsap from 'gsap'
 import Swal from 'sweetalert2'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -64,10 +64,11 @@ const Nabvar = () => {
   const openSwalForm = () => {
     Swal.fire({
       title: "Join us",
-      background: "#101C2C",
+      background: "#101C2C", 
       color: "#C2956B",
       html: `
         <form id="swalForm">
+          <p>Join us as a developer and be part of our dynamic team creating innovative solutions.</p> <br />
           <input type="text" id="swalName" name="Name" required placeholder="Name" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #C2956B; border-radius: 12px" autocomplete="off"><br><br>
           <input type="email" id="swalEmail" name="Email" required placeholder="E-mail" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #C2956B; border-radius: 12px" autocomplete="off"><br><br>
           <textarea id="swalReason" name="Reason" required placeholder="Why Join us ?" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #C2956B; border-radius: 12px" autocomplete="off"></textarea><br>
@@ -81,7 +82,12 @@ const Nabvar = () => {
       }
     }).then((result) => {
       if (result.isConfirmed) {
+        console.log(result)
         const formData = result.value;
+        console.log(result.value)
+        if(!formData.value) {
+          openSwalForm();
+        }
         postData(formData);
       }
     });
@@ -90,8 +96,8 @@ const Nabvar = () => {
   return (
     <nav id='navbar' className={styles.navbarContainer}>
         <div className={styles.navbarBody}>
-            <div className={`${styles.imageContainer} navItem`}><img src={olivialogo}/></div>
-            <div><button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>{location === "/" ? "Know More" : "Join us"}</button></div>
+            <div className={`${styles.imageContainer} navItem`}><img src={olivialogo} onClick={() => navigate(`/`)}/></div>
+            <div><button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>{location === "/" ? "Know More" : "Contribute"}</button></div>
         </div>
     </nav>
   )

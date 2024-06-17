@@ -7,8 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 
-*::selection {
-  @apply bg-orange-bg text-blue-text;
+* {
+  user-select: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 body {

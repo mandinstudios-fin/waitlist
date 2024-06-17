@@ -12,7 +12,7 @@ const Hero = () => {
     
     useGSAP(() => {
         console.log("gsap")
-        gsap.fromTo(".input", {y: "100%", opacity: 0}, {y: 0, opacity: 1, duration: 0.9, stagger: 0.3})
+        gsap.fromTo(".input", {y: "100%", opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.4})
     })
 
     const handleInput = (e: Event) => {
@@ -37,7 +37,7 @@ const Hero = () => {
                 background: "#101C2C",
                 color: "#C2956B",
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2000
             });
             return;
         }
@@ -50,7 +50,7 @@ const Hero = () => {
                 background: "#101C2C",
                 color: "#C2956B",
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2000
             });
             return;
         }
@@ -68,7 +68,7 @@ const Hero = () => {
                     background: "#101C2C",
                     color: "#C2956B",
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 2000
                 });
                 return;
             }
@@ -79,7 +79,7 @@ const Hero = () => {
                 background: "#101C2C",
                 color: "#C2956B",
                 showConfirmButton: false,
-                timer: 1700,
+                timer: 2000,
             })
             
             const text = await response.text();
@@ -93,7 +93,7 @@ const Hero = () => {
                 background: "#101C2C",
                 color: "#C2956B",
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2000
             });
             console.error('There was a problem with the fetch operation:', error);
         } 
@@ -114,7 +114,7 @@ const Hero = () => {
                     <p className={styles.formDesc}>Sign up for our news letter to receive the latest updates and insights straight to your inbox.</p>
                     <form className={styles.form} onSubmit={handleSubmit} n>
                         <input name='Email' className={styles.input} placeholder={`name@gmail.com`} autoComplete='off'/>
-                        <button type='submit' className={styles.joinbutton}>Join Waitlist</button>
+                        <button type='submit' className={styles.joinbutton}>Join</button>
                     </form>
                 </div>
 
