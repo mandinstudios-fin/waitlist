@@ -94,6 +94,7 @@ const Nabvar = () => {
           Swal.showValidationMessage(`Please fill out all fields.`);
           return false;
         } else {
+          Swal.showLoading();
           const swalFormData = new FormData(document.getElementById('swalForm'));
           return swalFormData;
         }
