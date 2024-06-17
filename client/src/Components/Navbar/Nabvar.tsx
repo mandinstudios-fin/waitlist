@@ -11,7 +11,9 @@ const Nabvar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    gsap.fromTo(".navItem", {y: "-100%", opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.5})
+    if(location !== `/about`) {
+      gsap.fromTo(".navItem", {y: "-100%", opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.5})
+    }
   })
 
   const postData = async (formData: FormData) => {
