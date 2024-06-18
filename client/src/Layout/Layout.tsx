@@ -5,19 +5,21 @@ import Home from '../Pages/Home'
 import About from '../Pages/About'
 import Nabvar from '../Components/Navbar/Nabvar'
 import Footer from '../Components/Footer/Footer'
+import AnimatedTextBackground from '../Components/AnimatedTextBackground/AnimatedTextBackground'
 import dottedbg from '../assets/Images/dotted.svg'
 
 const Layout = () => {
   return (
-    <div className={styles.layout} style={{backgroundImage: `url(${dottedbg})`, backgroundRepeat: "no-repeat", backgroundSize: "contain"}}>
-      <Nabvar />
-      <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/about' element={<About />}/>
-      </Routes>
-      {/* <Footer /> */}
+    <div className={styles.layout} style={{ position: 'relative', height: '100vh' }}>
+      <AnimatedTextBackground />
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%' }}>
+        <Nabvar />
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/about' element={<About />}/>
+        </Routes>
+      </div>
     </div>
-    
   )
 }
 
