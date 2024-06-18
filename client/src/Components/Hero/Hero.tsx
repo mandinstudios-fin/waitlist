@@ -4,15 +4,14 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
 import Swal from 'sweetalert2'
 import { icons } from '../../utils/index'
-import { GoArrowUpRight } from "react-icons/go";
+import { coinItems } from '../../utils/index'
+import CoinsCard from './CoinsCard';
 import { Link } from 'react-router-dom';
-import Socialmedia from '../Socialmedia/Socialmedia';
 
 const Hero = () => {
     const [buttonText, setButtonText] = useState<string>("Join");
     
     useGSAP(() => {
-        console.log("gsap")
         gsap.fromTo(".input", {y: "100%", opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.4})
     })
 
@@ -27,40 +26,46 @@ const Hero = () => {
 
     const handleSubmit = async (e: FormEvent): Promise<void> => {
         e.preventDefault();
+
+        let emailInput = document.getElementById("Email") as HTMLInputElement;
+        const email = emailInput.value
+
         const formEle = document.querySelector("form") as HTMLFormElement;
         const formData = new FormData(formEle);
 
-        if(!(formData.get("Email") as string)) {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Please enter your E-mail!",
-                background: "#101C2C",
-                color: "#C2956B",
-                showConfirmButton: false,
-                timer: 2000
-            });
-            return;
-        }
+        // if(!(formData.get("Email") as string)) {
+        //     Swal.fire({
+        //         icon: "error",
+        //         title: "Oops...",
+        //         text: "Please enter your E-mail!",
+        //         background: "#101C2C",
+        //         color: "#C2956B",
+        //         showConfirmButton: false,
+        //         timer: 2000
+        //     });
+        //     return;
+        // }
 
-        if(!validateEmail(formData.get("Email") as string)) {
-            Swal.fire({
-                icon: "error",
-                title: "Oops... Invalid E-mail",
-                text: "Please enter valid E-mail!",
-                background: "#101C2C",
-                color: "#C2956B",
-                showConfirmButton: false,
-                timer: 2000
-            });
-            return;
-        }
+        // if(!validateEmail(formData.get("Email") as string)) {
+        //     Swal.fire({
+        //         icon: "error",
+        //         title: "Oops... Invalid E-mail",
+        //         text: "Please enter valid E-mail!",
+        //         background: "#101C2C",
+        //         color: "#C2956B",
+        //         showConfirmButton: false,
+        //         timer: 2000
+        //     });
+        //     return;
+        // }
+
+        // https://script.google.com/macros/s/AKfycbyX_zwCrqcDgrXX8PGDtzVaxuQW8TEdC1rm7BlL8oLv7mlh8Karr3snD4jUXBvAw1vX2g/exec
 
         try {
             setButtonText("Joining...");
-            const response = await fetch('https://script.google.com/macros/s/AKfycbyX_zwCrqcDgrXX8PGDtzVaxuQW8TEdC1rm7BlL8oLv7mlh8Karr3snD4jUXBvAw1vX2g/exec', {
+            const response = await fetch('http://192.168.1.2:7578/waitlist', {
                 method: 'POST',
-                body: formData
+                body: {email: email}
             });
         
             if (!response.ok) {
@@ -117,21 +122,28 @@ const Hero = () => {
                 <div className={`${styles.formContainer} input`}>
                     <h1 className={styles.formHeading}>Join our Waitlist</h1>
                     <p className={styles.formDesc}>Sign up for our news letter to receive the latest updates and insights straight to your inbox.</p>
-                    <form className={styles.form} onSubmit={handleSubmit} n>
-                        <input name='Email' className={styles.input} placeholder={`name@gmail.com`} autoComplete='off'/>
+                    <form className={styles.form} onSubmit={handleSubmit} >
+                        <input name='Email' id='Email' className={styles.input} placeholder={`name@gmail.com`} autoComplete='off'/>
                         <button type='submit' className={styles.joinbutton}>{buttonText}</button>
                     </form>
                 </div>
 
                 <div className={styles.iconsContainer}>
                     <div className={styles.iconsBody}>
-                        {icons.map((icon) => <div onClick={() => window.open(icon.link)} className={`${styles.iconBody} input`}><icon.icon color={`#C2956B`} className={styles.icon}/></div>)}
+                        {icons.map((icon) => <Link to={`${icon.link}`} className={`${styles.iconBody} input ${icon.link === "/about" ? "bg-orange-bg" : ""}`}><icon.icon className={`${styles.icon} ${icon.link === "/about" ? "animate-pulse text-blue-text" : "text-[#C2956B]"}`}/></Link>)}
                     </div>
                     {/* <Socialmedia /> */}
                 </div>
 
-                <div className={`${styles.redirect} input`}>
+                {/* <div className={`${styles.redirect} input`}>
                     <Link to={`/about`} className={styles.redirectBody}>Know More <GoArrowUpRight color={`#101C2C`} className={styles.icon}/></Link>
+                </div> */}
+
+                <div className={styles.coinsContainer}>
+                    <div className={`${styles.coinsHeading} input`}><h1>Top Watchlist</h1></div>
+                    <div className={styles.coinsBody}>
+                        {coinItems.map((coin, i) => <CoinsCard key={i} {...coin} className={`input`}/>)}
+                    </div>
                 </div>
             </div>
             

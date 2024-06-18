@@ -1,5 +1,5 @@
 .heroContainer {
-  @apply lg:h-[89vh] h-[81vh] md:h-[83.4vh] lg:mt-0 mt-6 overflow-hidden;
+  @apply lg:h-[89vh] xl:h-[86vh] md:h-[83.4vh] lg:mt-0 mt-6 overflow-hidden;
   background-image: url("../../assets/Images/mainbg.svg");
   background-size: cover;
   background-position: center;
@@ -19,7 +19,7 @@
 }
 
 .heroBody {
-  @apply flex items-end justify-center w-[100%] h-full text-center lg:items-center xl:items-center xl:justify-start;
+  @apply flex items-center justify-center h-full text-center md:mt-0 lg:items-center xl:items-center xl:justify-start;
 }
 
 .heroInnerBody {
@@ -39,23 +39,23 @@
 } */
 
 .formContainer {
-  @apply text-orange-text shadow-2xl bg-[#1E3451]/20 rounded-3xl text-center xl:w-[70vh]  xl:backdrop-blur-sm backdrop-blur-2xl xl:ml-20 p-10 lg:py-20 py-14 lg:px-24 lg:mx-0 mx-72;
+  @apply text-orange-text shadow-2xl bg-[#1E3451]/20 rounded-3xl text-center xl:w-[70vh]  xl:backdrop-blur-sm backdrop-blur-2xl xl:ml-20 p-10 px-5 lg:py-16 py-10 lg:px-16 lg:mx-0 mx-72;
 }
 
 .form {
-  @apply flex flex-col items-center p-0 mt-5 lg:gap-7 lg:mt-8 lg:flex-row lg:justify-between;
+  @apply flex flex-col items-center p-0 mt-5 lg:gap-7 xl:gap-2 lg:mt-8 lg:flex-row lg:justify-center;
 }
 
 .formHeading {
-  @apply text-3xl font-bold mb-7 lg:text-3xl xl:text-4xl;
+  @apply text-3xl font-bold text-nowrap mb-7 lg:text-3xl xl:text-5xl;
 }
 
 .formDesc {
-  @apply text-lg lg:text-base text-orange-text/70;
+  @apply text-xl lg:text-base text-[#949AA7];
 }
 
 .input {
-  @apply active:border-orange-text focus:border-orange-text py-3 lg:w-[35vh] w-[35vh] text-center bg-transparent border border-orange-text rounded-full;
+  @apply active:border-orange-text focus:border-orange-text py-3 lg:w-[35vh] w-[35vh] text-center bg-transparent border border-orange-text rounded-full placeholder:text-[#949AA7]/60;
 }
 
 .joinbutton {
@@ -71,11 +71,15 @@
 }
 
 .iconBody {
-  @apply p-3 m-3 rounded-full shadow-xl cursor-pointer border-orange-text bg-[#1E3451]/30 backdrop-blur-sm;
+  @apply p-3 m-3 rounded-full shadow-xl cursor-pointer bg-[#1E3451]/30 backdrop-blur-sm;
 }
 
 .icon {
   @apply inline size-7;
+}
+
+.icon:nth-child(4) {
+  color: black;
 }
 
 .redirect {
@@ -83,7 +87,7 @@
 }
 
 .redirectBody {
-  @apply p-3 m-3 font-medium rounded-full shadow-xl cursor-pointer bg-orange-bg;
+  @apply p-3 m-3 font-medium rounded-full shadow-xl cursor-pointer bg-gradient-to-r from-gradient-start to-gradient-end;
 }
 
 .imageContainer {
@@ -112,4 +116,29 @@
     background-position: center;
     animation: fadeIn 2s ease-in-out;
   }
+}
+
+.coinsContainer {
+  @apply pb-10 mx-64 mt-8 md:pb-0 md:mx-10 lg:mx-0 xl:ml-24;
+}
+
+.coinsHeading {
+  @apply mb-6 font-semibold lg:ml-12 xl:-ml-12 text-orange-text lg:text-2xl;
+}
+
+.coinsBody {
+  @apply grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3 md:gap-7;
+}
+
+.coin {
+  @apply flex flex-wrap items-center gap-2;
+}
+
+.coinImage {
+  @apply w-[4vw] md:w-[3vw] xl:w-[2vw];
+}
+
+.coinName,
+.coinSupply {
+  @apply text-[#949AA7];
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './AboutUs.module.css'
 import { aboutItems } from '../../utils/index'
 import AboutUsItemCard from './AboutUsItemCard'

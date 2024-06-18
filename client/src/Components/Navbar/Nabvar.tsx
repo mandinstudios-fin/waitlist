@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Navbar.module.css'
-import olivialogo from '../../assets/Images/olivialogo.svg'
+import olivialogo from '../../assets/Images/olivialogo (2).svg'
+import { GoArrowUpRight } from "react-icons/go";
 import gsap from 'gsap'
 import Swal from 'sweetalert2'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { useGSAP } from '@gsap/react';
 
 const Nabvar = () => {
   const [buttonText, setButtonText] = useState("Contribute")
   const location = useLocation().pathname;
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if(location !== `/about`) {
+  useGSAP(() => {
+    if(location === `/`) {
       gsap.fromTo(".navItem", {y: "-100%", opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.5})
     }
   })
@@ -88,9 +90,10 @@ const Nabvar = () => {
         const reasonInput = document.getElementById('swalReason') as HTMLTextAreaElement;
         const name = nameInput.value.trim();
         const email = emailInput.value.trim();
+        const emailat = email.includes('@');
         const reason = reasonInput.value.trim();
 
-        if (!name || !email || !reason) {
+        if (!name || !email || !emailat || !reason) {
           Swal.showValidationMessage(`Please fill out all fields.`);
           return false;
         } else {
@@ -111,7 +114,7 @@ const Nabvar = () => {
     <nav id='navbar' className={styles.navbarContainer}>
         <div className={styles.navbarBody}>
             <div className={`${styles.imageContainer} navItem`}><img src={olivialogo} onClick={() => navigate(`/`)}/></div>
-            <div><button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>{location === "/" ? "Know More" : buttonText}</button></div>
+            <div><button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>{location === "/" ? "Know More" : buttonText}{location === "/" && <GoArrowUpRight size={30}/>}</button></div>
         </div>
     </nav>
   )

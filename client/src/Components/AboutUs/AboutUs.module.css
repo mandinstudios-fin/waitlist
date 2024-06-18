@@ -4,16 +4,12 @@
 }
 
 @font-face {
-  font-family: "Lateef";
-  src: url("../../assets/Fonts/LateefRegOT.ttf") format("truetype");
-}
-
-.aboutContainer {
-  @apply h-auto;
+  font-family: "Metrisch";
+  src: url("../../assets/Fonts/Metrisch-Book-webfont.ttf") format("truetype");
 }
 
 .aboutBody {
-  @apply py-12 text-center xl:py-0 xl:pb-12 mx-7 xl:mx-16;
+  @apply py-12 text-center xl:py-0 mx-7 xl:mx-16;
 }
 
 .mainDetails {
@@ -21,44 +17,45 @@
 }
 
 .mainDetails1 {
+  font-family: "Metrisch";
   @apply font-bold uppercase text-9xl text-orange-text;
 }
 
 .mainDetails1 h1 {
-  @apply text-center cursor-pointer;
+  @apply inline text-center cursor-pointer;
 }
 
 .mainDetails2 {
-  @apply italic text-white-text/70;
+  @apply lg:mt-0 text-[#949AA7];
 }
 
 .mainDetails3 {
   hyphens: auto;
   text-align: justify;
   content-visibility: auto;
-  @apply my-8 text-lg xl:my-8 font-extralight xl:mb-12 lg:text-2xl text-orange-text;
-}
-
-.mainDetails3 p {
-  font-weight: lighter;
+  @apply mt-5 text-lg lg:mt-0 font-extralight xl:mt-5 xl:mb-12 lg:text-xl text-[#949AA7];
 }
 
 .mainDetails3 p span {
-  @apply font-extrabold text-orange-text;
+  @apply font-extrabold;
 }
 
 .itemsContainer {
-  @apply flex flex-col justify-center gap-5 mt-12 xl:mt-8 lg:flex-row xl:mx-48;
+  @apply flex flex-col justify-center gap-5 mt-8 xl:mt-0 lg:flex-row xl:mx-48;
 }
 
 .cardContainer {
-  @apply relative flex-1 shadow-2xl rounded-3xl bg-[#1E3451]/20 text-orange-text backdrop-blur-sm hover:drop-shadow-2xl;
+  @apply w-[2/3] h-auto relative flex-1 shadow-2xl rounded-3xl bg-[#1E3451]/20 text-orange-text backdrop-blur-sm hover:drop-shadow-2xl;
 }
 
 .cardContainer:hover {
+  @apply shadow-md shadow-[#c2956b7a];
+}
+
+/* .cardContainer:hover {
   @apply transition duration-500 cursor-default;
   box-shadow: 0px 0px 10px #c2956b7a;
-}
+} */
 
 /* .cardContainer::after {
   content: "";
@@ -89,16 +86,14 @@
   @apply text-xl font-semibold text-center lg:text-2xl;
 }
 
-.cardDescription {
-  hyphens: auto;
-  text-align: auto;
-  word-spacing: -2px;
-  content-visibility: auto;
-  @apply mt-4 text-lg text-orange-text/70;
+.cardDescription p {
+  text-align: left;
+  word-spacing: 0.1px;
+  @apply mt-6 text-base text-[#949AA7];
 }
 
 .details {
-  @apply pb-12 mt-10 text-xl text-center lg:text-2xl lg:mt-20;
+  @apply mt-10 text-xl text-center xl:mt-5 lg:mt-20;
 }
 
 .details1 {
@@ -106,11 +101,11 @@
   hyphens: auto;
   text-align: justify;
   word-spacing: 2px;
-  @apply text-justify text-orange-text xl:mx-32;
+  @apply mt-10 text-justify text-[#949AA7] xl:mx-32;
 }
 
 .details2 {
-  @apply mt-10 text-center text-white-text;
+  @apply text-center text-white-text mt-7;
 }
 
 .details2 span:nth-child(1) {
