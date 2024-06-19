@@ -29,7 +29,7 @@ const Hero = () => {
                 icon: "error",
                 title: "Oops...",
                 text: "Please enter your E-mail!",
-                background: "#101C2C",
+                background: "#000000",
                 color: "#C2956B",
                 showConfirmButton: false,
                 timer: 2000
@@ -42,10 +42,10 @@ const Hero = () => {
                 icon: "error",
                 title: "Oops... Invalid E-mail",
                 text: "Please enter a valid E-mail!",
-                background: "#101C2C",
+                background: "#000000",
                 color: "#C2956B",
                 showConfirmButton: false,
-                timer: 2000
+                timer: 3000
             });
             return;
         }
@@ -64,10 +64,10 @@ const Hero = () => {
                 Swal.fire({
                     icon: "error",
                     title: "Oops...",
-                    background: "#101C2C",
+                    background: "#000000",
                     color: "#C2956B",
                     showConfirmButton: false,
-                    timer: 2000
+                    timer: 3000
                 });
                 setButtonText("Join");
                 return;
@@ -75,10 +75,11 @@ const Hero = () => {
                 Swal.fire({
                     icon: "success",
                     title: "Waitlist Joined...!",
-                    background: "#101C2C",
+                    background: "#000000",
                     color: "#C2956B",
                     showConfirmButton: false,
-                    timer: 2000,
+                    timer: 3000,
+                    
                 });
                 setButtonText("Join");
                 setEmail("");
@@ -89,7 +90,7 @@ const Hero = () => {
                 icon: "error",
                 title: "Oops...",
                 text: "Something went wrong",
-                background: "#101C2C",
+                background: "#000000",
                 color: "#C2956B",
                 showConfirmButton: false,
                 timer: 2000
@@ -118,6 +119,8 @@ const Hero = () => {
                             />
                             <button type='submit' className={styles.joinbutton}>{buttonText}</button>
                         </form>
+                        {/* <div className={`${styles.pseudo1} border-t ${styles.top}`}></div>
+                        <div className={`${styles.pseudo2} border-l ${styles.left}`}></div> */}
                     </div>
 
                     <div className={styles.iconsContainer}>
@@ -126,8 +129,8 @@ const Hero = () => {
                                 <Link
                                     key={icon.link}
                                     to={icon.link}
-                                    className={`${styles.iconBody} input ${icon.link === "/about" ? "bg-orange-bg" : ""}`}>
-                                    <icon.icon className={`${styles.icon} ${icon.link === "/about" ? "animate-pulse text-blue-text" : "text-[#C2956B]"}`} />
+                                    className={`${styles.iconBody} input parent ${icon.link === "/about" ? "bg-orange-bg" : ""}`}>
+                                    <icon.icon className={`${styles.icon} child ${icon.link === "/about" ? "animate-pulse text-blue-text" : "text-[#C2956B]"}`} />
                                 </Link>
                             ))}
                         </div>

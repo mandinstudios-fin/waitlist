@@ -1,63 +1,58 @@
 import React, { useRef, useEffect } from 'react';
 
 const AnimatedTextBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  let ctx: CanvasRenderingContext2D | null = null;
-  let animationFrameId: number | null = null;
-  const animationSpeed = 0.5;
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    if (canvasRef.current) {
-      const canvas = canvasRef.current;
-      const dpr = window.devicePixelRatio || 1;
-      ctx = canvas.getContext('2d');
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-      if (ctx) {
-        canvas.width = window.innerWidth * dpr;
-        canvas.height = window.innerHeight * dpr;
-        canvas.style.width = `${window.innerWidth}px`;
-        canvas.style.height = `${window.innerHeight}px`;
-        ctx.scale(dpr, dpr);
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
 
-        const fontSize = 10 * dpr;
-        let letters = "10101010101010100101010101010101001101010101010101010010101010101010100110";
-        letters = letters.split("");
-        const columns = canvas.width / fontSize;
-        const drops: number[] = [];
+    const fontSize = 10;
+    const letters = "■ □ ■ □".split("");
+    const columns = Math.ceil(canvas.width / fontSize); // Adjusted to ensure all columns are covered
+    const drops: number[] = Array.from({ length: columns }, () => canvas.height / fontSize); // Initialize drops at bottom
 
-        for (let i = 0; i < columns; i++) {
-          drops[i] = Math.random() * canvas.height;
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      drops.fill(canvas.height / fontSize); // Reset drops array on resize
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    ctx.font = `${fontSize}px monospace`;
+
+    const draw = () => {
+      //ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+      ctx.fillStyle = "rgba(0, 0, 0, .1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillStyle = "#101C2C";
+        let alpha = 1 - ((drops[i] * fontSize - canvas.height / 4 ) / (canvas.height / 4));
+        if (alpha < 0) alpha = 0;
+        ctx.fillStyle = `rgba(141, 110, 79, ${alpha})`;
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        drops[i]++;
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+          drops[i] = 0;
         }
-
-        const draw = () => {
-          if (ctx) {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "#101C2C";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "#8D6E4F";
-            ctx.font = `${fontSize}px Arial`;
-
-            for (let i = 0; i < drops.length; i++) {
-              const text = letters[Math.floor(Math.random() * letters.length)];
-              ctx.fillText(text, i * fontSize, drops[i]);
-              drops[i] = (drops[i] + animationSpeed) % canvas.height;
-            }
-          }
-          animationFrameId = window.requestAnimationFrame(draw);
-        };
-
-        animationFrameId = window.requestAnimationFrame(draw);
-
-        return () => {
-          if (animationFrameId) {
-            window.cancelAnimationFrame(animationFrameId);
-          }
-        };
       }
-    }
+    };
+
+    const intervalId = setInterval(draw, 70);
+
+    return () => {
+      clearInterval(intervalId);
+      window.removeEventListener('resize', resizeCanvas);
+    };
   }, []);
 
-  return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }} />;
+  return <canvas ref={canvasRef} />;
 };
 
 export default AnimatedTextBackground;

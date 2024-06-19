@@ -10,13 +10,14 @@ import dottedbg from '../assets/Images/dotted.svg'
 
 const Layout = () => {
   return (
-    <div className={styles.layout} style={{ position: 'relative', height: '100vh' }}>
+    <div className={styles.layout} style={{ position: 'relative' }}>
       <AnimatedTextBackground />
       <div style={{ position: 'absolute', top: 0, left: 0, width: '100%' }}>
         <Nabvar />
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/about' element={<About />}/>
+          <Route path='*' element={<Home />} />
         </Routes>
       </div>
     </div>

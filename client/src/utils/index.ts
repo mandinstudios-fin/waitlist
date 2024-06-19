@@ -5,7 +5,8 @@ import near from '../assets/Images/coins/Top BTC W-01.svg'
 import bitcoin from '../assets/Images/coins/Top BTC B-01.svg'
 import ton from '../assets/Images/coins/Top BTC T-01.svg'
 
-import { FaInstagram, FaTelegram, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
 type IconItem = {
     icon: any; 
@@ -14,15 +15,15 @@ type IconItem = {
 export const icons: IconItem[] = [
     {
         icon: FaInstagram,
-        link: ""
+        link: "https://instagram.com/mandin_studios"
     },
     {
-        icon: FaTelegram,
-        link: ""
+        icon: FaTelegramPlane,
+        link: "https://t.me/oliviafinance_xyz"
     },
     {
-        icon: FaTwitter,
-        link: ""
+        icon: FaXTwitter,
+        link: "https://x.com/oliviafinance"
     },
     {
         icon: GoArrowUpRight,

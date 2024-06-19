@@ -13,6 +13,10 @@ const AboutUs = () => {
         gsap.fromTo(".details", { y: "100%", opacity: 0 }, {y: 0, opacity: 1, stagger: 0.2, duration: 1})
     })
 
+    useEffect(() => {
+        console.log(window.performance)
+    })
+
   return (
     <section className={styles.aboutContainer}>
         <div className={styles.aboutBody}>

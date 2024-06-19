@@ -33,7 +33,7 @@
   hyphens: auto;
   text-align: justify;
   content-visibility: auto;
-  @apply mt-5 text-lg lg:mt-0 font-extralight xl:mt-5 xl:mb-12 lg:text-xl text-[#949AA7];
+  @apply mt-5 text-lg lg:mt-0 font-extralight xl:mt-5 xl:mb-5 lg:text-xl text-[#949AA7];
 }
 
 .mainDetails3 p span {
@@ -45,7 +45,7 @@
 }
 
 .cardContainer {
-  @apply w-[2/3] h-auto relative flex-1 shadow-2xl rounded-3xl bg-[#1E3451]/20 text-orange-text backdrop-blur-sm hover:drop-shadow-2xl;
+  @apply w-[2/3] h-auto relative flex-1 shadow-2xl rounded-3xl bg-[#000000]/5 border border-[#C2956B]/20 text-orange-text backdrop-blur-sm hover:drop-shadow-2xl;
 }
 
 .cardContainer:hover {

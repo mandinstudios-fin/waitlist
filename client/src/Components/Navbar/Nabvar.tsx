@@ -34,8 +34,8 @@ const Navbar = () => {
           icon: 'success',
           title: 'Success',
           text: 'Form submitted successfully!',
-          background: "#101C2C",
-          color: "#C2956B",
+          background: "#C2956B",
+          color: "#020202",
           showConfirmButton: false,
           timer: 2000
         });
@@ -45,8 +45,8 @@ const Navbar = () => {
           icon: 'error',
           title: 'Error',
           text: 'Failed to submit form. Please try again later.',
-          background: "#101C2C",
-          color: "#C2956B",
+          background: "#C2956B",
+          color: "#020202",
           showConfirmButton: false,
           timer: 1500
         });
@@ -57,8 +57,8 @@ const Navbar = () => {
         icon: 'error',
         title: 'Error',
         text: 'An error occurred. Please try again later.',
-        background: "#101C2C",
-        color: "#C2956B",
+        background: "#C2956B",
+        color: "#020202",
         showConfirmButton: false,
         timer: 2000
       });
@@ -73,18 +73,21 @@ const Navbar = () => {
   const openSwalForm = () => {
     Swal.fire({
       title: "Join us",
-      background: "#101C2C",
-      color: "#C2956B",
+      background: "#4d3c2a",
+      color: "#020202",
       html: `
         <form id="swalForm">
           <p>Join us as a developer and be part of our dynamic team creating innovative solutions.</p> <br />
-          <input type="text" id="swalName" name="Name" required placeholder="Name" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #C2956B; border-radius: 12px" autocomplete="off"><br><br>
-          <input type="email" id="swalEmail" name="Email" required placeholder="E-mail" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #C2956B; border-radius: 12px" autocomplete="off"><br><br>
-          <textarea id="swalReason" name="Reason" required placeholder="Why Join us ?" style="outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #C2956B; border-radius: 12px" autocomplete="off"></textarea><br>
+          <input type="text" id="swalName" name="Name" required placeholder="Name" style="color: #000000; outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #000000; border-radius: 25px" autocomplete="off"><br><br>
+          <input type="email" id="swalEmail" name="Email" required placeholder="E-mail" style="color: #000000; outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #000000; border-radius: 25px" autocomplete="off"><br><br>
+          <textarea id="swalReason" name="Reason" required placeholder="Why Join us ?" style="color: #000000; outline: 0; background-color: transparent; width: 100%;  padding: 15px; border: 1px solid #000000; border-radius: 25px" autocomplete="off"></textarea><br>
         </form>
+        <style>
+          input:placeholder { color: #fff; }
+        </style>
       `,
       confirmButtonText: 'Submit',
-      confirmButtonColor: "#C2956B",
+      confirmButtonColor: "transparent",
       preConfirm: () => {
         const nameInput = document.getElementById('swalName') as HTMLInputElement;
         const emailInput = document.getElementById('swalEmail') as HTMLInputElement;
@@ -118,7 +121,7 @@ const Navbar = () => {
         <div>
           <button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>
             {location === "/" ? "Know More" : buttonText}
-            {location === "/" && <GoArrowUpRight size={30}/>}
+            {location === "/" && <GoArrowUpRight color={`#101c2c`} size={30}/>}
           </button>
         </div>
       </div>
