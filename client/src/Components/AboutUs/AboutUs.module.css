@@ -9,11 +9,11 @@
 }
 
 .aboutBody {
-  @apply py-12 text-center xl:py-0 mx-7 xl:mx-16;
+  @apply py-12 text-center xl:py-0 mx-7 2xl:mx-16;
 }
 
 .mainDetails {
-  @apply xl:mx-28;
+  @apply xl:mx-20 2xl:mx-28 ;
 }
 
 .mainDetails1 {
@@ -41,7 +41,7 @@
 }
 
 .itemsContainer {
-  @apply flex flex-col justify-center gap-5 mt-8 xl:mt-0 lg:flex-row xl:mx-48;
+  @apply flex flex-col justify-center gap-5 mt-8 xl:mt-0 lg:flex-row xl:mx-32 2xl:mx-48;
 }
 
 .cardContainer {
@@ -101,7 +101,7 @@
   hyphens: auto;
   text-align: justify;
   word-spacing: 2px;
-  @apply mt-10 text-justify text-[#949AA7] xl:mx-32;
+  @apply mt-10 text-justify text-[#949AA7] 2xl:mx-32 xl:mx-20;
 }
 
 .details2 {
