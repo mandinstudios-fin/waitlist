@@ -7,5 +7,5 @@
 }
 
 .joinButton {
-  @apply flex items-center p-2 px-4 font-medium rounded-full lg:text-2xl bg-orange-bg lg:px-9 text-white-text;
+  @apply flex items-center p-2 px-4 font-medium rounded-full bg-orange-bg lg:px-9 text-white-text;
 }

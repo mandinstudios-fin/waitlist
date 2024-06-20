@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -15,6 +16,7 @@ module.exports = {
       },
     },
     screens: {
+      'xsm': '360px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',

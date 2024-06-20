@@ -126,12 +126,12 @@ const Hero = () => {
                     <div className={styles.iconsContainer}>
                         <div className={styles.iconsBody}>
                             {icons.map((icon) => (
-                                <Link
+                                <p
                                     key={icon.link}
-                                    to={icon.link}
+                                    onClick={() => window.open(icon.link)}
                                     className={`${styles.iconBody} input parent ${icon.link === "/about" ? "bg-orange-bg" : ""}`}>
                                     <icon.icon className={`${styles.icon} child ${icon.link === "/about" ? "animate-pulse text-blue-text" : "text-[#C2956B]"}`} />
-                                </Link>
+                                </p>
                             ))}
                         </div>
                     </div>

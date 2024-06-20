@@ -2,7 +2,7 @@
   @apply lg:h-[89vh] xl:h-[88vh] md:h-[83.4vh] lg:mt-0 mt-6 overflow-hidden;
   background-image: url("../../assets/Images/mainbg.svg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   image-resolution: from-image 300dpi;
   image-rendering: pixelated;
@@ -19,11 +19,11 @@
 }
 
 .heroBody {
-  @apply flex items-center justify-center h-full text-center md:mt-0 lg:items-center xl:items-center xl:justify-start;
+  @apply flex items-center justify-center h-full md:mt-0 lg:items-center lg:justify-center xl:items-center xl:justify-start;
 }
 
 .heroInnerBody {
-  @apply flex flex-col items-center justify-center lg:mx-60 xl:mx-0 xl:ml-36 lg:mt-96 xl:mt-0;
+  @apply flex flex-col items-center justify-center xl:mx-0 lg:mr-0 2xl:ml-32 lg:mt-96 xl:mt-4 2xl:mt-0;
 }
 
 /* .inputBody {
@@ -39,9 +39,12 @@
 } */
 
 .formContainer {
-  @apply text-orange-text relative border border-white/20 shadow-2xl shadow-orange-bg/5 bg-[#000000]/5 rounded-3xl text-center xl:w-[70vh]  xl:backdrop-blur-sm backdrop-blur-2xl xl:ml-20 p-10 px-5 lg:py-16 py-10 lg:px-16 lg:mx-0 mx-72;
+  backdrop-filter: blur(40px);
 }
 
+.formContainer {
+  @apply text-orange-text border relative border-white/20 shadow-2xl shadow-orange-bg/5 bg-[#000000]/5 rounded-3xl text-center lg:w-[50vh] xl:w-[65vh] 2xl:w-[70vh] xl:ml-16 2xl:ml-16 p-7 px-5 lg:py-5 xl:py-10 2xl:py-16 py-10 lg:px-32 xl:px-8 2xl:px-10 lg:mx-0 mx-72 md:mx-32;
+}
 /* .pseudo1,
 .pseudo2 {
   @apply absolute inset-0 -z-10;
@@ -61,11 +64,11 @@
 } */
 
 .form {
-  @apply flex flex-col items-center p-0 mt-5 lg:gap-7 xl:gap-2 lg:mt-8 lg:flex-row lg:justify-center;
+  @apply flex flex-col items-center p-0 mt-5 lg:gap-7 xl:gap-2 lg:mt-4 lg:flex-row lg:justify-center;
 }
 
 .formHeading {
-  @apply text-3xl font-bold text-nowrap mb-7 lg:text-3xl xl:text-5xl;
+  @apply mb-3 text-3xl font-bold text-nowrap lg:text-2xl xl:text-3xl 2xl:text-5xl;
 }
 
 .formDesc {
@@ -145,7 +148,7 @@
 }
 
 .coinsHeading {
-  @apply mb-6 font-semibold lg:ml-12 xl:-ml-12 text-orange-text lg:text-2xl;
+  @apply mb-6 font-semibold text-center lg:ml-12 xl:-ml-12 text-orange-text lg:text-2xl;
 }
 
 .coinsBody {
@@ -162,5 +165,5 @@
 
 .coinName,
 .coinSupply {
-  @apply text-[#949AA7];
+  @apply text-[#949AA7] xsm:text-sm text-base md:text-lg;
 }

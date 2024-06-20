@@ -1,7 +1,7 @@
 .loaderContainer {
-  @apply h-[90vh] flex justify-center items-center;
+  @apply h-[90vh] w-full flex justify-center items-center;
 }
 
 .loaderBody {
-  @apply w-[90vw] xl:w-[30vw];
+  @apply w-[90vw] xl:w-[30vw] flex justify-center;
 }

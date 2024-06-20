@@ -12,8 +12,8 @@ const CoinsCard = ({ icon, name, supply }: CoinItem) => {
     <div className={`${styles.coinContainer} input`}>
         <div className={styles.coin}>
             <div className={styles.coinImage}><img src={icon}/></div>
-            <div className={`${styles.coinName} ${name === "Olin" ? "font-medium text-orange-text text-lg" : ""}`}><h1>{name} -</h1></div>
-            <div className={`${styles.coinSupply} ${name === "Olin" ? "font-medium text-orange-text text-lg" : ""}`}><h1>{supply}</h1></div>
+            <div className={`${styles.coinName} ${name === "Olin" ? "font-medium text-orange-text text-lg xsm:text-sm sm:text-lg" : ""}`}><h1>{name} -</h1></div>
+            <div className={`${styles.coinSupply} ${name === "Olin" ? "font-medium text-orange-text text-lg xsm:text-sm sm:text-lg" : ""}`}><h1>{supply}</h1></div>
         </div>
     </div>
   )
