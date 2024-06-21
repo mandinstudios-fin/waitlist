@@ -7,7 +7,6 @@ import ton from '../assets/Images/coins/Top BTC T-01.svg'
 
 import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { GoArrowUpRight } from "react-icons/go";
 type IconItem = {
     icon: any; 
     link: string;
@@ -24,11 +23,7 @@ export const icons: IconItem[] = [
     {
         icon: FaXTwitter,
         link: "https://x.com/oliviafinance"
-    },
-    {
-        icon: GoArrowUpRight,
-        link: "/about"
-    },
+    }
 ];
 
 type AboutusItems = {

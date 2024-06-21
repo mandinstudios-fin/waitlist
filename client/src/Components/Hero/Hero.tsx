@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { icons } from '../../utils/index';
 import { coinItems } from '../../utils/index';
 import CoinsCard from './CoinsCard';
+import { GoArrowUpRight } from "react-icons/go";
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -129,10 +130,11 @@ const Hero = () => {
                                 <p
                                     key={icon.link}
                                     onClick={() => window.open(icon.link)}
-                                    className={`${styles.iconBody} input parent ${icon.link === "/about" ? "bg-orange-bg" : ""}`}>
-                                    <icon.icon className={`${styles.icon} child ${icon.link === "/about" ? "animate-pulse text-blue-text" : "text-[#C2956B]"}`} />
+                                    className={`${styles.iconBody} input ${icon.link === "/about" ? "bg-orange-bg" : ""}`}>
+                                    <icon.icon className={`${styles.icon} ${icon.link === "/about" ? "animate-pulse text-blue-text" : "text-[#C2956B]"}`} />
                                 </p>
                             ))}
+                            <Link to={`/about`} className={`${styles.arrowBody} input`}><GoArrowUpRight className={styles.arrow}/></Link>
                         </div>
                     </div>
 

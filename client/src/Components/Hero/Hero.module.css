@@ -103,9 +103,15 @@
   @apply block size-7;
 }
 
-.icon:nth-child(4) {
-  color: black;
+.arrowBody {
+  @apply p-3 m-3 rounded-full shadow-xl cursor-pointer bg-orange-text backdrop-blur-sm  transition-colors duration-500;
 }
+
+.arrow {
+  @apply block size-7 animate-pulse text-blue-text
+}
+
+
 
 .redirect {
   @apply pb-12 mt-5 lg:ml-11;
