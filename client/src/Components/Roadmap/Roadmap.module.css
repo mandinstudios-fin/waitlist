@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/Fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "InterLight";
+  src: url("../../assets/Fonts/Inter-Light.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsSemiBold";
+  src: url("../../assets/Fonts/Poppins-SemiBold.ttf");
+}
+
+.sectionContainer {
+  background-image: url("../../assets/Images/BG-01.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sectionBody {
+  @apply w-full h-[169vh] lg:h-[140vh] xl:h-[172vh] 2xl:h-[185vh] lg:pt-[12vw] xl:pt-[2.3vw] pt-[12vw] lg:px-20 2xl:px-96 xl:px-60 px-4 text-white-text;
+}
+
+.headerContent {
+  @apply sticky top-[5vw] lg:top-[5vw] xl:top-[2.3vw] text-center;
+}
+
+.headerHeading {
+  font-family: "PoppinsSemiBold";
+  @apply text-4xl text-orange-text;
+}
+
+.headerDesc {
+  font-family: "Inter";
+  @apply px-4 mt-3 text-left lg:text-xl text-white-text/75;
+}
+
+.cardsContainer {
+  @apply pt-[2vw] lg:pt-[3vw] sticky z-50 2xl:px-20;
+}
+
+.cardsBody {
+  font-family: "Inter";
+  @apply grid grid-cols-1 gap-10;
+}
+
+.card {
+  @apply w-full bg-[#17191C] border-t-4 border-orange-bg pb-[6vw];
+}
+
+.cardBody {
+  @apply py-[1vw] px-[2vw] flex items-center relative;
+}
+
+.cardHead {
+  @apply w-full text-xl font-bold text-orange-text lg:text-2xl xl:text-3xl;
+}
+
+.cardDesc {
+  font-family: "InterLight";
+  @apply w-full font-extralight text-white-text/75 h-full lg:text-xl xl:text-2xl xl:px-20 lg:px-16 px-5 pt-[3vw] text-left;
+}
+
+.buttonContainer {
+  @apply pt-[7vw] flex justify-center;
+}
+
+.button {
+  font-family: "Inter";
+  @apply text-black bg-white-text;
+}

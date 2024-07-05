@@ -9,14 +9,14 @@
 }
 
 .heroContainer {
-  @apply lg:h-[89vh] xl:h-[87vh] md:h-[83.4vh] lg:mt-0 mt-6 overflow-hidden;
+  @apply xl:h-[88vh] lg:mt-0 mt-12 overflow-hidden;
   background-image: url("../../assets/Images/bg.svg");
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
   image-resolution: from-image 300dpi;
   image-rendering: pixelated;
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -62,7 +62,7 @@
 
 .content1 {
   font-family: "Inter";
-  @apply inline-block p-2 px-5 font-semibold tracking-wide border xl:text-xl text-white-text border-white/40 rounded-xl;
+  @apply inline-block p-2 px-5 text-[3vw] font-semibold tracking-wide border text-nowrap md:text-lg xl:text-xl text-white-text border-white/40 rounded-md;
 }
 
 .content2 {
@@ -80,7 +80,7 @@
 
 .content3 {
   font-family: "Inter";
-  @apply mt-3 text-center text-white-text lg:mx-32 xl:mx-0;
+  @apply mt-3 text-center text-white-text lg:mx-32 md:mx-16 xl:mx-0;
 }
 
 /* .pseudo1,
@@ -115,7 +115,7 @@
 }
 
 .input {
-  @apply bg-[#606060]/30 outline-0 py-3 lg:w-[35vh] xl:w-[42vh] w-[45vh] pl-5 border border-orange-text/5 rounded-xl placeholder:text-white-text/50 focus:shadow-lg;
+  @apply bg-[#606060]/30 focus:text-white-text/50 outline-0 py-3 lg:w-[35vh] xl:w-[42vh] w-[45vh] pl-5 border border-orange-text/5 rounded-xl placeholder:text-white-text/50 focus:shadow-lg;
 }
 
 .joinbutton {
@@ -217,5 +217,9 @@
 }
 
 .imageBody {
-  @apply w-[100%];
+  @apply w-[100%] h-[100%];
+}
+
+.image {
+  @apply object-contain;
 }

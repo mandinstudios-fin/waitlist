@@ -10,9 +10,9 @@ const Footer = () => {
 
   return (
     <section className={`${styles.footerContainer} footer`}>
-        <div className={styles.footerBody}>
-            <h1 className={styles.footerText} onClick={() => window.open(`https://mandinstudios.com/`)}>All Rights Reserved @mandinstudios.com</h1>
-        </div>
+      <div className={styles.footerBody}>
+        
+      </div>
     </section>
   )
 }

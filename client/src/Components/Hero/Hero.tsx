@@ -130,7 +130,7 @@ const Hero = () => {
                             <p className={styles.content2}><span className={styles.content2part1}>Ready to Revolutionize Your</span> <br className='hidden lg:block'/> Olin Token? Join the Olivia<br className='hidden lg:block'/> <span className={styles.content2part2}>Waitlist Today</span></p>
                         </div>
                         <div className={styles.content3}>
-                            <p>Discover an Olin Token of incredible Olivia Finance and be prepared for and exciting wave <br className='hidden xl:block'/> of new resources on the finance. Sign up to our waitlist to be notified when we launch so<br className='hidden xl:block'/> you don't miss out on stunning Olin token resources.</p>
+                            <p>Discover an Olin Token of incredible Olivia Finance and be prepared for and exciting wave <br className='hidden xl:block'/> of new resources on the finance. <span></span>Sign up to our waitlist to be notified when we launch so<br className='hidden xl:block'/> you don't miss out on stunning Olin token resources.</p>
                         </div>
                     </div>
 
@@ -164,7 +164,7 @@ const Hero = () => {
 
                     <div className={styles.imageContainerr}>
                         <div className={styles.imageBody}>
-                            <img src={weblogo}/>
+                            <img className={styles.image} src={weblogo}/>
                         </div>
                     </div>
 

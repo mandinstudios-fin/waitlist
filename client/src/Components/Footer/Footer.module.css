@@ -1,5 +1,5 @@
 .footerContainer {
-  @apply text-center lg:fixed lg:bottom-0 lg:right-0 lg:left-0 bg-orange-bg;
+  @apply text-center;
 }
 
 .footerBody {

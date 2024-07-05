@@ -5,9 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "main-background": "#000000",
-        "orange-bg": "#C2956B",
-        "orange-text": "#C2956B",
+        "main-background": "#0F1114",
+        "orange-bg": "#C3956B",
+        "orange-text": "#C3956B",
         "blue-text": "#101C2C",
         "bg-dots": "#111E2F",
         "gradient-start": "#F1D9A0",

@@ -129,8 +129,8 @@ const Navbar = () => {
         <div>
           <button className={`${styles.joinButton} navItem`}>
             <p className={styles.joinText}>Join us!</p>
-            <div className={styles.iconBody}><FaTelegramPlane className={styles.icon} /></div>
-            <div className={styles.iconBody}><FaXTwitter className={styles.icon} /></div>
+            <div className={styles.iconBody} onClick={() => window.open(`https://t.me/oliviafinance_xyz`)}><FaTelegramPlane className={styles.icon} /></div>
+            <div className={styles.iconBody} onClick={() => window.open(`https://x.com/oliviafinance`)}><FaXTwitter className={styles.icon} /></div>
           </button>
         </div>
       </div>
