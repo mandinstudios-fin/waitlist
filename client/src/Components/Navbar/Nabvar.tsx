@@ -6,6 +6,8 @@ import gsap from 'gsap';
 import Swal from 'sweetalert2';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useGSAP } from '@gsap/react';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaTelegramPlane } from 'react-icons/fa';
 
 const Navbar = () => {
   const [buttonText, setButtonText] = useState("Contribute");
@@ -118,10 +120,17 @@ const Navbar = () => {
         <div className={`${styles.imageContainer} navItem`}>
           <img src={olivialogo} onClick={() => navigate(`/`)} alt="Olivialogo" />
         </div>
-        <div>
+        {/* <div>
           <button onClick={location === "/" ? navigateTo : openSwalForm} className={`${styles.joinButton} navItem`}>
             {location === "/" ? "Know More" : buttonText}
             {location === "/" && <GoArrowUpRight color={`#101c2c`} size={30}/>}
+          </button>
+        </div> */}
+        <div>
+          <button className={`${styles.joinButton} navItem`}>
+            <p className={styles.joinText}>Join us!</p>
+            <div className={styles.iconBody} onClick={() => window.open(`https://t.me/oliviafinance_xyz`)}><FaTelegramPlane className={styles.icon} /></div>
+            <div className={styles.iconBody} onClick={() => window.open(`https://x.com/oliviafinance`)}><FaXTwitter className={styles.icon} /></div>
           </button>
         </div>
       </div>
