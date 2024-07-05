@@ -11,7 +11,7 @@ import Lenis from '../Components/Lenis/Lenis'
 
 const Layout = () => {
   return (
-    <>
+    <Lenis>
       <div className={styles.layout} style={{ position: 'relative' }}>
         {/* <AnimatedTextBackground /> */}
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%' }}>
@@ -23,7 +23,7 @@ const Layout = () => {
           </Routes>
         </div>
       </div>
-    </>
+    </Lenis>
     
   )
 }

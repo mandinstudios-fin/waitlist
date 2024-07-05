@@ -19,7 +19,7 @@ const FeaturedCard = () => {
             <div className={styles.cardDesc}><p>{`In a pioneering move, we are introducing physical gift cards for crypto, allowing users to easily load and transfer tokens with unparalleled ease. These gift cards will be available for individuals and institutions alike, facilitating seamless crypto transfers through a familiar physical card model. Imagine the joy of presenting someone with a unique crypto gift, encapsulating the future of finance in a tangible form.`}</p></div>
         </div>
 
-        <div className={`${styles.card} sticky top-[90vw] lg:top-[34vw] xl:top-[26vw] 2xl:top-[18vw]`} >
+        <div className={`${styles.card} sticky top-[90vw] lg:top-[34vw] xl:top-[26vw] 2xl:top-[30vw]`} >
             <div className={styles.cardBody} style={{top:`calc((${3}*50)px)`}}>
                 <div className={styles.cardHead}><h1>{`Bridging the Fiat-Crypto Gap`}</h1></div>
             </div>

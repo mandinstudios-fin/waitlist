@@ -7,5 +7,5 @@
 }
 
 .footerText {
-  @apply text-xl font-medium cursor-pointer text-blue-text;
+  @apply text-xl font-medium cursor-pointer text-white-text/75;
 }

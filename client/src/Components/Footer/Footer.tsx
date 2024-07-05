@@ -11,7 +11,8 @@ const Footer = () => {
   return (
     <section className={`${styles.footerContainer} footer`}>
       <div className={styles.footerBody}>
-        
+        <div><p>Join us on this exciting journey as we reshape the crypto trading landscape with Olin Token. Embrace the future of finance, where innovation, community, and accessibility converge to create a truly empowering experience.</p></div>
+        <div><p></p></div>
       </div>
     </section>
   )

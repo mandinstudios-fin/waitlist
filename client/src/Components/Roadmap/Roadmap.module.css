@@ -21,11 +21,11 @@
 }
 
 .sectionBody {
-  @apply w-full h-[169vh] lg:h-[140vh] xl:h-[172vh] 2xl:h-[185vh] lg:pt-[12vw] xl:pt-[2.3vw] pt-[12vw] lg:px-20 2xl:px-96 xl:px-60 px-4 text-white-text;
+  @apply w-full h-[169vh] lg:h-[140vh] xl:h-[172vh] 2xl:h-full lg:pt-[12vw] xl:pt-[2.3vw] pt-[12vw] lg:px-20 2xl:px-[18vw] xl:px-60 px-4 text-white-text;
 }
 
 .headerContent {
-  @apply sticky top-[5vw] lg:top-[5vw] xl:top-[2.3vw] text-center;
+  @apply sticky relative top-[5vw] lg:top-[5vw] xl:top-[2.3vw] text-center;
 }
 
 .headerHeading {
@@ -64,11 +64,24 @@
   @apply w-full font-extralight text-white-text/75 h-full lg:text-xl xl:text-2xl xl:px-20 lg:px-16 px-5 pt-[3vw] text-left;
 }
 
-.buttonContainer {
-  @apply pt-[7vw] flex justify-center;
+.lastContainer {
+  @apply pt-[5vw] text-center;
 }
 
 .button {
   font-family: "Inter";
   @apply text-black bg-white-text;
+}
+
+.join {
+  @apply mt-[2vw] pb-[4vw]
+}
+
+.joinbutton {
+  font-family: "Inter";
+  @apply p-3 px-5 mt-[5vw] text-center font-bold rounded-xl lg:p-3 lg:px-7 lg:mt-0 bg-white-text text-nowrap text-black;
+}
+
+.joinIcon {
+  @apply inline;
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Roadmap.module.css'
 import { featuredItems } from '../../utils'
 import FeaturedCard from './FeaturedCard'
+import { MdOutlineArrowRightAlt } from 'react-icons/md'
 
 const Roadmap = () => {
   return (
@@ -15,6 +16,18 @@ const Roadmap = () => {
             <div className={styles.cardsContainer}>
                 <div className={styles.cardsBody}>
                     <FeaturedCard />
+                </div>
+            </div>
+
+            <div className={styles.lastContainer}>
+                <div><p>Join us on this exciting journey as we reshape the crypto trading landscape with Olin Token. Embrace the future of finance, where innovation, community, and accessibility converge to create a truly empowering experience.</p></div>
+                <div className={styles.join}>
+                <button onClick={() => {
+                    const hero = document.getElementById('navbar');
+                    if (hero) {
+                        hero.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }} className={styles.joinbutton}>Join Waitlist <MdOutlineArrowRightAlt className={styles.joinIcon}/></button>
                 </div>
             </div>
         </div>

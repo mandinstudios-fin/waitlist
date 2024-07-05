@@ -9,7 +9,7 @@
 }
 
 .heroContainer {
-  @apply xl:h-[88vh] lg:mt-0 mt-12 overflow-hidden;
+  @apply xl:h-[89vh] 2xl:h-[100vh] lg:mt-0 mt-12 overflow-hidden;
   background-image: url("../../assets/Images/bg.svg");
   background-size: contain;
   background-position: right;
@@ -103,7 +103,7 @@
 
 .form {
   font-family: "Inter";
-  @apply flex flex-col p-0 mt-5 xl:items-center lg:gap-7 xl:gap-3 lg:mt-7 lg:flex-row lg:justify-center;
+  @apply flex flex-col px-2 p-0 mt-5 xl:items-center lg:gap-7 xl:gap-3 lg:mt-7 lg:flex-row lg:justify-center;
 }
 
 .formHeading {
@@ -194,7 +194,7 @@
 
 .coinsContainer {
   font-family: "Inter";
-  @apply pb-10 mx-0 mt-20 md:pb-0 md:mx-10 lg:mx-0 xl:ml-0;
+  @apply pb-10 mx-0 mt-[10vw] md:pb-0 md:mx-10 lg:mx-0 xl:ml-0;
 }
 
 .coinsHeading {
@@ -219,7 +219,7 @@
 }
 
 .imageContainerr {
-  @apply w-full mt-[5vw] flex justify-center xl:hidden;
+  @apply w-full mt-[10vw] flex justify-center xl:hidden;
 }
 
 .imageBody {
