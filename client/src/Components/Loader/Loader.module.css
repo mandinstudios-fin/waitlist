@@ -1,5 +1,5 @@
 .loaderContainer {
-  @apply h-[90vh] w-full flex justify-center items-center;
+  @apply h-[100vh] w-full flex justify-center items-center bg-[#000000];
 }
 
 .loaderBody {

@@ -29,11 +29,11 @@
 }
 
 .heroBody {
-  @apply flex items-center justify-center h-[90%] md:mt-0 lg:items-start lg:justify-center xl:justify-start;
+  @apply flex items-center justify-center md:mt-0 lg:items-start lg:justify-center xl:justify-start;
 }
 
 .heroInnerBody {
-  @apply flex flex-col items-center justify-center xl:mx-0 lg:mr-0 2xl:ml-20 lg:mt-0 xl:mt-4 2xl:mt-0;
+  @apply flex flex-col items-center justify-center xl:mx-0 lg:mr-0 2xl:ml-20 lg:mt-0 xl:mt-4 2xl:mt-[3.7vw];
 }
 
 /* .inputBody {
@@ -103,7 +103,7 @@
 
 .form {
   font-family: "Inter";
-  @apply flex flex-col px-2 p-0 mt-5 xl:items-center lg:gap-7 xl:gap-3 lg:mt-7 lg:flex-row lg:justify-center;
+  @apply flex flex-col p-0 px-2 mt-5 xl:items-center lg:gap-7 xl:gap-3 lg:mt-7 lg:flex-row lg:justify-center;
 }
 
 .formHeading {
@@ -147,14 +147,12 @@
 }
 
 .arrowBody {
-  @apply p-3 m-3 rounded-full shadow-xl cursor-pointer bg-orange-text backdrop-blur-sm  transition-colors duration-500;
+  @apply p-3 m-3 transition-colors duration-500 rounded-full shadow-xl cursor-pointer bg-orange-text backdrop-blur-sm;
 }
 
 .arrow {
-  @apply block size-7 animate-pulse text-blue-text
+  @apply block size-7 animate-pulse text-blue-text;
 }
-
-
 
 .redirect {
   @apply pb-12 mt-5 lg:ml-11;
@@ -194,11 +192,11 @@
 
 .coinsContainer {
   font-family: "Inter";
-  @apply pb-10 mx-0 mt-[10vw] md:pb-0 md:mx-10 lg:mx-0 xl:ml-0;
+  @apply pb-10 mx-0 mt-[10vw] xl:mt-[5vw] md:pb-0 md:mx-10 lg:mx-0 xl:ml-0;
 }
 
 .coinsHeading {
-  @apply mb-6 font-semibold text-center lg:ml-12 xl:-ml-12 text-orange-text lg:text-2xl;
+  @apply mb-6 font-semibold text-[#949AA7] text-center lg:ml-12 xl:-ml-12 lg:text-2xl;
 }
 
 .coinsBody {
