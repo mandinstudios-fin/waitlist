@@ -12,7 +12,7 @@
   @apply xl:h-[89vh] 2xl:h-[100vh] lg:mt-0 mt-12 overflow-hidden;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .heroContainer {
     background-image: url("../../assets/Images/herobg.svg");
     background-size: contain;
@@ -220,7 +220,7 @@
 }
 
 .imageContainerr {
-  @apply w-full mt-[10vw] h-auto flex justify-center xl:hidden;
+  @apply w-full mt-[10vw] h-auto flex justify-center lg:hidden;
 }
 
 .imageBody {
