@@ -21,11 +21,11 @@
 }
 
 .sectionBody {
-  @apply w-full h-[170vh] lg:h-[140vh] xl:h-[172vh] 2xl:h-[174vh] lg:pt-[12vw] xl:pt-[2.3vw] pt-[12vw] lg:px-20 2xl:px-[18vw] xl:px-60 px-4 text-white-text;
+  @apply w-full h-auto lg:h-auto xl:h-auto 2xl:h-auto 2xl:pb-0 lg:pt-[12vw] xl:pt-[3vw] pt-[12vw] md:px-12 lg:px-20 2xl:px-[18vw] xl:px-60 px-4 text-white-text;
 }
 
 .headerContent {
-  @apply sticky top-[5vw] lg:top-[5vw] xl:top-[3vw] text-center;
+  @apply text-center;
 }
 
 .headerHeading {
@@ -44,7 +44,7 @@
 
 .cardsBody {
   font-family: "Inter";
-  @apply grid grid-cols-1 gap-10;
+  @apply sticky top-0 grid grid-cols-1 gap-10;
 }
 
 .card {
@@ -56,7 +56,7 @@
 }
 
 .cardHead {
-  @apply w-full text-xl font-bold text-white-text/75 lg:text-2xl xl:text-3xl;
+  @apply w-full mt-2 text-xl font-bold text-white-text/75 lg:text-2xl xl:text-3xl;
 }
 
 .cardDesc {
@@ -65,7 +65,7 @@
 }
 
 .lastContainer {
-  @apply pt-[1.5vw] text-center;
+  @apply flex flex-col items-center justify-center text-center py-[7vw] xl:py-[3vw];
 }
 
 .button {
@@ -73,13 +73,9 @@
   @apply text-black bg-white-text;
 }
 
-.join {
-  @apply mt-[2vw];
-}
-
 .joinbutton {
   font-family: "Inter";
-  @apply p-3 px-5 mt-[1vw] font-bold text-center text-black rounded-xl lg:p-3 lg:px-7 lg:mt-3 bg-white-text text-nowrap;
+  @apply p-3 px-5 mt-[5vw] xl:mt-[2vw] font-bold text-center text-black rounded-xl lg:p-3 lg:px-7 lg:mt-3 bg-white-text text-nowrap;
 }
 
 .joinIcon {

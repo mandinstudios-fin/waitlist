@@ -10,13 +10,16 @@
 
 .heroContainer {
   @apply xl:h-[89vh] 2xl:h-[100vh] lg:mt-0 mt-12 overflow-hidden;
-  background-image: url("../../assets/Images/bg.svg");
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  image-resolution: from-image 300dpi;
-  image-rendering: pixelated;
-  animation: fadeIn 2s ease-in-out;
+}
+
+@media (min-width: 1280px) {
+  .heroContainer {
+    background-image: url("../../assets/Images/herobg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
+  }
 }
 
 @keyframes fadeIn {
@@ -67,7 +70,7 @@
 
 .content2 {
   font-family: "PoppinsBold";
-  @apply mt-2 text-4xl text-transparent xl:leading-[4.5rem] bg-gradient-to-r from-gradient-start to-gradient-end via-gradient-start bg-clip-text xl:tracking-wide xl:text-6xl;
+  @apply mt-2 text-4xl xl:leading-[4.5rem] text-white/75 xl:tracking-wide xl:text-[3.75rem];
 }
 
 .content2part1 {
@@ -217,7 +220,7 @@
 }
 
 .imageContainerr {
-  @apply w-full mt-[10vw] flex justify-center xl:hidden;
+  @apply w-full mt-[10vw] h-auto flex justify-center xl:hidden;
 }
 
 .imageBody {
@@ -225,5 +228,5 @@
 }
 
 .image {
-  @apply object-contain;
+  @apply object-fill;
 }

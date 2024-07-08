@@ -9,3 +9,25 @@
 .footerText {
   @apply text-xl font-medium cursor-pointer text-white-text/75;
 }
+
+.lastContainer {
+  @apply xsm:pt-[10%] xsm:pb-[%] pt-[20%] pb-[40%] lg:pt-[5%] lg:pb-[65%] xl:pb-[18%] xl:pt-[4%] 2xl:pt-[4%] 2xl:pb-[9%] flex flex-col items-center justify-center text-center lg:px-20 2xl:px-[18vw] xl:px-60 px-4;
+}
+
+.button {
+  font-family: "Inter";
+  @apply text-black bg-white-text;
+}
+
+.join {
+  @apply 2xl:mt-[7vw];
+}
+
+.joinbutton {
+  font-family: "Inter";
+  @apply p-3 px-5 mt-[1vw] font-bold text-center text-black rounded-xl lg:p-3 lg:px-7 lg:mt-3 bg-white-text text-nowrap;
+}
+
+.joinIcon {
+  @apply inline;
+}

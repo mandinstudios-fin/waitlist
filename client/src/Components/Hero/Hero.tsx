@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from 'react';
-import weblogo from '../../assets/Images/weblogo.svg'
+import weblogo from '../../assets/Images/mobile-div.svg'
 import styles from './Hero.module.css';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';

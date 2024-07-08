@@ -8,7 +8,7 @@
 }
 
 .imageContainer {
-  @apply w-[33vw] md:w-[20vw] lg:w-[21vw] xl:w-[10vw] cursor-pointer -mt-3 md:-mt-5 lg:-mt-9 xl:-mt-8;
+  @apply w-[33vw] md:w-[20vw] lg:w-[21vw] xl:w-[10vw] cursor-pointer -mt-3 md:-mt-5 lg:-mt-9 xl:-mt-3;
 }
 
 .joinButton {
