@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from 'react';
-import weblogo from '../../assets/Images/mobile-div.svg'
+import weblogo from '../../assets/Images/mobile-olin.svg'
 import styles from './Hero.module.css';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -123,16 +123,25 @@ const Hero = () => {
                             <button type='submit' className={styles.joinbutton}>{buttonText}</button>
                         </form>
                     </div> */}
-                    <div className={styles.contentContainer}>
-                        <div className={styles.content1}>
+                    <div className={styles.content1}>
                             <p>Amazing Resources Coming Your Way!</p>
                         </div>
-                        <div>
-                            <p className={styles.content2}><span className={styles.content2part1}>Ready to Revolutionize Your</span> <br className='hidden lg:block'/> Olin Token? Join the Olivia<br className='hidden lg:block'/> <span className={styles.content2part2}>Waitlist Today</span></p>
+                    <div className={styles.contentContainer}>
+                        
+
+                        <div className={styles.imageContainerr}>
+                            <div className={styles.imageBody}>
+                                <img className={styles.image} src={weblogo}/>
+                            </div>
+                        </div>
+
+                        <div className={styles.revoHeading}>
+                            {/* <p className={`${styles.content2} hidden lg:block`}><span className={styles.content2part1}>Ready to Revolutionize Your</span> <br className='hidden lg:block'/> Olin Token? Join the Olivia<br className='hidden lg:block'/> <span className={styles.content2part2}>Waitlist Today</span></p> */}
+                            <p className={`${styles.content2}`}>Join the <br />Olivia Waitlist Today!</p>
                         </div>
                         <div className={styles.content3}>
-                            <p className='hidden xl:block'>Discover an Olin Token of incredible Olivia Finance and be prepared for and exciting wave <br className='hidden xl:block'/> of new resources on the finance. <span></span>Sign up to our waitlist to be notified when we launch so<br className='hidden xl:block'/> you don't miss out on stunning Olin token resources.</p>
-                            <p className='block xl:hidden'>Discover an Olin Token of incredible Olivia Finance and be prepared for and exciting wave <br className='hidden xl:block'/> of new resources on the finance.</p>
+                            <p className='hidden lg:block'>Discover an Olin Token of Olivia Finance and be prepared for and exciting wave of new<br className='hidden xl:block'/> resources on the finance. <span></span>Sign up to our waitlist to be notified when we launch so<br className='hidden xl:block'/> you don't miss out on stunning Olin token resources.</p>
+                            <p className='block lg:hidden'>Discover an Olin Token of Olivia Finance and be prepared for and exciting wave <br className='hidden xl:block'/> of new resources on the finance.</p>
                         </div>
                     </div>
 
@@ -165,11 +174,11 @@ const Hero = () => {
                         </div>
                     </div> */}
 
-                    <div className={styles.imageContainerr}>
+                    {/* <div className={styles.imageContainerr}>
                         <div className={styles.imageBody}>
                             <img className={styles.image} src={weblogo}/>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className={styles.coinsContainer}>
                         <div className={`${styles.coinsHeading} input`}><h1>Top Bitcoins Supply</h1></div>

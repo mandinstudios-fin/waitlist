@@ -26,7 +26,7 @@ const Roadmap = () => {
     <section className={styles.sectionContainer} id='sectionContainer'>
         <div className={styles.sectionBody}>
             <div className={styles.headerContent}>
-                <h1 className={styles.headerHeading}>Revolutionizing Crypto Trading <br className='block lg:hidden'/> on Olivia</h1>
+                <h1 className={styles.headerHeading}>Revolutionizing Crypto Trading <br className='block md:hidden'/> on Olivia</h1>
                 <div className={styles.headerDescContainer}>
                     <p className={styles.headerDesc}>Olivia India is thrilled to introduce Olin, our groundbreaking native cryptocurrency token that will redefine the way you trade and interact with our platform. Olin Token encapsulates our unwavering commitment to innovation, community empowerment, and democratized access to the crypto realm.</p>
                 </div>
